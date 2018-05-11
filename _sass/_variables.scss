@@ -15,9 +15,13 @@ $lightGray: #eee;
 $white: #fff;
 
 // Font stacks
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:400|Fauna+One");
+
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
+$montserrat-alternates: "Montserrat Alternates", sans-serif;
+$fauna-one: "Fauna One", serif;
 
 // Mobile breakpoints
 @mixin mobile {
