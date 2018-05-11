@@ -117,6 +117,10 @@ Wrap with 2 tilde characters:
 
 ~~Strikethrough~~
 
+### Single Code Block
+
+`fancy code goes here`
+
 #### Fenced Code Blocks
 
 Start with a line containing 3 or more backticks, and ends with the first line with the same number of backticks:
