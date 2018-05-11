@@ -1,9 +1,7 @@
 ---
 published: true
 ---
-## Overview
-
-A list of all Markdown elements to test CSS
+## A list of all Markdown elements to test CSS
 
 ### Syntax
 
