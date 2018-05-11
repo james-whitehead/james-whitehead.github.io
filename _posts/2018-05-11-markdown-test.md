@@ -1,11 +1,6 @@
 ---
 published: true
 ---
----
-layout: post
-title: Markdown Test
----
-
 ## Overview
 
 A list of all Markdown elements to test CSS
