@@ -125,10 +125,9 @@ Wrap with 2 tilde characters:
 
 Start with a line containing 3 or more backticks, and ends with the first line with the same number of backticks:
 
-```
-Fenced code blocks are like Stardard Markdown’s regular code
-blocks, except that they’re not indented and instead rely on
-a start and end fence lines to delimit the code block.
+```python
+def hello_world():
+    print('Hello, world!')
 ```
 
 #### Tables
