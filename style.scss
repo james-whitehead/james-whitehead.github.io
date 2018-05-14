@@ -90,7 +90,11 @@ a:after {
   border-radius: 3px;
   width: 0;
   background: $red;
-  left: 0.8em;
+  left: 0.3em;
+}
+
+a.read-more:after {
+  height: 1px;
 }
 
 a:hover:after {
