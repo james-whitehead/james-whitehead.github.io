@@ -85,12 +85,12 @@ a:after {
   content: "";
   transition: 0.5s all ease;
   position: absolute;
-  bottom: -0.35em;
+  bottom: -0.25em;
   height: 5px;
   border-radius: 3px;
   width: 0;
   background: $red;
-  left: 0.6em;
+  left: 0.8em;
 }
 
 a:hover:after {
@@ -188,7 +188,7 @@ img {
   margin-top: 10px;
   float: left;
   background: rgb(239, 35, 60);
-  height: 3px;
+  height: 1px;
   border-radius: 3px;
   width: 100%;
 }
