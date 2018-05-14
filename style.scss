@@ -71,7 +71,6 @@ p {
 
 a, a:visited, a:hover, a:active {
   text-decoration: none;
-  font-size: 2em;
   font-family: "Fauna One", serif;
   color: $light-grey;
   position: relative;
@@ -91,7 +90,6 @@ a:after {
   border-radius: 3px;
   width: 0;
   background: $red;
-  left: 0.6em;
 }
 
 a:hover:after {
