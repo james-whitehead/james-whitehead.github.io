@@ -74,6 +74,7 @@ a {
 	cursor: pointer;
   &:hover, &:active {
     color: $light-blue;
+    text-decoration: underline;
   }
 }
 
@@ -192,7 +193,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $light-blue;
+  color: $light-grey;
   cursor: pointer;
   font-family: $montserrat-alternates;
   font-weight: 400;
@@ -224,13 +225,13 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $light-blue;
+    color: $light-grey;
     text-align: right;
     font-weight: 400;
 
     @include mobile {
       margin: 0 10px;
-      color: $light-blue;
+      color: $light-grey;
     }
   }
 }
