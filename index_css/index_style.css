@@ -14,10 +14,6 @@ h1 {
 .welcome {
     margin-top: 33%;
 }
-
-.single-line {
-    display: none;
-} 
   
 h1:after {
     /* Uses a psuedo-element for the underine */
@@ -67,14 +63,6 @@ a:hover:after {
     .welcome {
         margin-top: 5%;
     }
-    
-    .single-line {
-        display: inline-block;
-    }
-
-    .multiline {
-        display: none;
-    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -86,14 +74,6 @@ a:hover:after {
         transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
-    }
-
-    .single-line {
-        display: inline-block;
-    }
-
-    .multiline {
-        display: none;
     }
 
     h1 {
