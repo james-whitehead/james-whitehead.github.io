@@ -90,7 +90,7 @@ a:after {
   border-radius: 3px;
   width: 0;
   background: $red;
-  left: 0.3em;
+  left: 0.2em;
 }
 
 a.read-more:after {
@@ -273,7 +273,7 @@ nav {
 // .main
 //
 
-.posts > .post:after {
+.posts:after > .post {
   /* Uses a psuedo-element for the underine */
   content: "";
   margin-top: 10px;
@@ -321,6 +321,9 @@ footer {
   text-align: center;
 }
 
+.entry {
+  color: $light-grey;
+}
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
