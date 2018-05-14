@@ -45,10 +45,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.entry h2 {
-  color: $light-grey !important;
-}
-
 h1 {
   font-size: 30px;
   a {
@@ -58,6 +54,9 @@ h1 {
 
 h2 {
   font-size: 24px;
+  .entry {
+    color: $light-grey !important;
+  }
 }
 
 h3 {
