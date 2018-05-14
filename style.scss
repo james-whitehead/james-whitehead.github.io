@@ -31,10 +31,6 @@ body {
   width: 100%;
 }
 
-.entry {
-  color: $light-grey !important;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: $montserrat-alternates;
   color: $light-blue;
@@ -47,6 +43,10 @@ h1, h2, h3, h4, h5, h6 {
   @include mobile {
     line-height: 1.4;
   }
+}
+
+.entry h2 {
+  color: $light-grey !important;
 }
 
 h1 {
@@ -102,7 +102,7 @@ a.read-more:after {
 }
 
 a:hover:after {
-  width: 100%;
+  width: 105%;
 }
 
 ul, ol {
@@ -179,7 +179,7 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 85px;
+  margin-bottom: 100px;
 }
 
 .masthead:after {
