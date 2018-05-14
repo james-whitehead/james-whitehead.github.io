@@ -90,7 +90,7 @@ a:after {
   border-radius: 3px;
   width: 0;
   background: $red;
-  left: 0.2em;
+  left: 0em;
 }
 
 a.read-more:after {
@@ -175,7 +175,7 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 85px;
 }
 
 .masthead:after {
@@ -326,7 +326,7 @@ footer {
 }
 
 .entry {
-  color: $light-grey;
+  color: $light-grey !important;
 }
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
