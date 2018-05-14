@@ -126,8 +126,32 @@ Wrap with 2 tilde characters:
 Start with a line containing 3 or more backticks, and ends with the first line with the same number of backticks:
 
 ```python
-def hello_world():
-    print('Hello, world!')
+class Animal:
+  def __init__(self, name, species, noise):
+    self.name = name
+    self.species = species
+    self.noise = noise
+
+  def speak(self):
+    print('{} the {} made a {} noise'.format(self.name, self.species, self.noise))
+
+class Dog(Animal):
+  def __init__(self, name):
+    species = 'dog'
+    noise = 'woof'
+    Animal.__init__(self, name, species, noise)
+
+class Cat(Animal):
+  def __init__(self, name):
+    species = 'cat'
+    noise = 'meow'
+    Animal.__init__(self, name, species, noise)
+
+if __name__ == '__main__':
+  ruby = Dog('Ruby')
+  opal = Cat('Opal')
+  ruby.speak()
+  opal.speak()
 ```
 
 #### Tables
