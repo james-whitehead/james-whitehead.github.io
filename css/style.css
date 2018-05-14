@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:400|Fauna+One");
+body {
+    background-color: rgb(43, 45, 66);
+}
+
+h1 {
+    font-size: 3em;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    color: rgb(173, 216, 230);
+    margin-bottom: 20px;
+}
+
+.welcome {
+    margin-top: 33%;
+}
+
+.single-line {
+    display: none;
+} 
+  
+h1:after {
+    /* Uses a psuedo-element for the underine */
+    content: "";
+    margin-top: 10px;
+    float: left;
+    background: rgb(239, 35, 60);
+    height: 6px;
+    border-radius: 3px;
+    width: 90%;
+}
+  
+.wrapper {
+    margin-bottom: 10px;
+}
+
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    font-size: 2em;
+    font-family: "Fauna One", serif;
+    color: rgb(178, 188, 199);
+    position: relative;
+    transition: 0.5s color ease;
+}
+
+a:hover {
+    color: rgb(239, 35, 60)
+}
+
+a:after {
+    content: "";
+    transition: 0.5s all ease;
+    position: absolute;
+    bottom: -0.25em;
+    height: 5px;
+    border-radius: 3px;
+    width: 0;
+    background: rgb(239, 35, 60);
+    left: 0.6em;
+}
+
+a:hover:after {
+    width: 100%;
+}
+
+@media screen and (orientation: landscape) {
+    .welcome {
+        margin-top: 5%;
+    }
+    
+    .single-line {
+        display: inline-block;
+    }
+
+    .multiline {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .welcome {
+        margin-top: 0%;
+        position: absolute;
+        top: 40%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+    }
+
+    .single-line {
+        display: inline-block;
+    }
+
+    .multiline {
+        display: none;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h1:after {
+        width: 110%;
+    }
+
+    a:hover:after {
+        width: 105%;
+    }
+}
