@@ -85,11 +85,12 @@ a:after {
   content: "";
   transition: 0.5s all ease;
   position: absolute;
-  bottom: -0.25em;
+  bottom: -0.35em;
   height: 5px;
   border-radius: 3px;
   width: 0;
   background: $red;
+  left: 0.6em;
 }
 
 a:hover:after {
@@ -187,9 +188,9 @@ img {
   margin-top: 10px;
   float: left;
   background: rgb(239, 35, 60);
-  height: 6px;
+  height: 3px;
   border-radius: 3px;
-  width: 90%;
+  width: 100%;
 }
 
 .site-avatar {
@@ -268,9 +269,15 @@ nav {
 // .main
 //
 
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $light-grey;
+.posts > .post:after {
+  /* Uses a psuedo-element for the underine */
+  content: "";
+  margin-top: 10px;
+  float: left;
+  background: rgb(239, 35, 60);
+  height: 3px;
+  border-radius: 3px;
+  width: 100%;
 }
 
 .posts > .post:last-child {
