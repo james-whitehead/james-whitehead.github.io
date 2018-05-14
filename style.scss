@@ -56,8 +56,8 @@ h2 {
   font-size: 24px;
 }
 
-.entry h2 {
-  color: $light-grey !important;
+.entry > i > h2 {
+  color: #B2BCC7 !important;
 }
 
 h3 {
@@ -74,7 +74,6 @@ p {
 
 a, a:visited, a:hover, a:active {
   text-decoration: none;
-  font-family: "Fauna One", serif;
   color: $light-blue;
   position: relative;
   transition: 0.5s color ease;
@@ -101,7 +100,7 @@ a.read-more:after {
 }
 
 a:hover:after {
-  width: 92%;
+  width: 99%;
 }
 
 ul, ol {
@@ -191,7 +190,7 @@ img {
   margin-top: 10px;
   float: left;
   background: rgb(239, 35, 60);
-  height: 2px;
+  height: 3px;
   border-radius: 3px;
   width: 100%;
 }
@@ -286,7 +285,7 @@ nav {
   margin-top: 10px;
   float: left;
   background: rgb(239, 35, 60);
-  height: 2px;
+  height: 3px;
   border-radius: 3px;
   width: 100%;
 }
