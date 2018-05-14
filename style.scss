@@ -31,6 +31,10 @@ body {
   width: 100%;
 }
 
+.entry {
+  color: $light-grey !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $montserrat-alternates;
   color: $light-blue;
@@ -325,9 +329,6 @@ footer {
   text-align: center;
 }
 
-.entry {
-  color: $light-grey !important;
-}
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
