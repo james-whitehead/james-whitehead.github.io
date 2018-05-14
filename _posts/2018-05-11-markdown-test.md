@@ -133,7 +133,8 @@ class Animal:
     self.noise = noise
 
   def speak(self):
-    print('{} the {} made a {} noise'.format(self.name, self.species, self.noise))
+    print('{} the {} made a {} noise'.format(
+      self.name, self.species, self.noise))
 
 class Dog(Animal):
   def __init__(self, name):
