@@ -72,7 +72,7 @@ p {
 a, a:visited, a:hover, a:active {
   text-decoration: none;
   font-family: "Fauna One", serif;
-  color: $light-grey;
+  color: $light-blue;
   position: relative;
   transition: 0.5s color ease;
 }
@@ -175,7 +175,7 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .masthead {
@@ -184,17 +184,6 @@ img {
   @include mobile {
     text-align: center;
   }
-}
-
-.masthead:after {
-  /* Uses a psuedo-element for the underine */
-  content: "";
-  margin-top: 10px;
-  float: left;
-  background: rgb(239, 35, 60);
-  height: 1px;
-  border-radius: 3px;
-  width: 100%;
 }
 
 .site-avatar {
@@ -273,7 +262,7 @@ nav {
 // .main
 //
 
-.posts:after > .post {
+.posts > .post:after {
   /* Uses a psuedo-element for the underine */
   content: "";
   margin-top: 10px;
@@ -287,6 +276,10 @@ nav {
 .posts > .post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
+}
+
+.posts > .post:last-child:after {
+  height: 0px;
 }
 
 .post {
