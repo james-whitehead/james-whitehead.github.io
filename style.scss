@@ -60,6 +60,7 @@ h2 {
   color: #B2BCC7 !important;
 }
 
+
 h3 {
   font-size: 20px;
 }
@@ -93,6 +94,10 @@ a:after {
   width: 0;
   background: $red;
   left: 0em;
+}
+
+.entry a:after {
+  height: 0px;
 }
 
 a.read-more:after {
