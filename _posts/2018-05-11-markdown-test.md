@@ -1,7 +1,10 @@
 ---
 published: true
+layout: post
+title: Markdown Test
+excerpt: A list of all Markdown elements to test the style
+comments: true
 ---
-## A list of all Markdown elements to test CSS
 
 ### Syntax
 

@@ -1,11 +1,14 @@
 ---
+published: true
 layout: post
 title: Hello, world!
+excerpt: Hello, world!
+comments: true
 ---
 
 ## Hello, world!
 
-### Subitle
+### Subtitle
 
 Text and stuff
 
