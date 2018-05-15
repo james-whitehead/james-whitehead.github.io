@@ -307,11 +307,15 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 2px solid $light-grey;
+    border-left: 2px solid $red;
     padding: 0.1em 1em;
     color: $light-grey;
     font-size: 15px;
     font-style: italic;
+  }
+
+  hr {
+    border: 1px solid $red;
   }
 
   .comments {

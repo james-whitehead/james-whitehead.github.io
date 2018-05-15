@@ -10,7 +10,7 @@ Sometimes you stumble upon two articles, connected but written separately, that 
 
 > Scientific results today are as often as not found with the help of computers. That’s because the ideas are complex, dynamic, hard to grab ahold of in your mind’s eye. And yet by far the most popular tool we have for communicating these results is the PDF - literally a simulation of a piece of paper. Maybe we can do better.
 > The Scientific Paper is Obsolete (James Somers, The Atlantic)
-<!-- -->
+
 > The charts that made it into the paper - a Nobel Prize winning paper - are incredibly difficult for me to understand. I remember looking at this and thinking: "How am I ever going to explain this to the public, to my audience?"
 > Design for an Audience (Jonathan Corum, The New York Times)
 
