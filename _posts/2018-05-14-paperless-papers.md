@@ -10,7 +10,7 @@ Sometimes you stumble upon two articles, connected but written separately, that 
 
 > Scientific results today are as often as not found with the help of computers. That’s because the ideas are complex, dynamic, hard to grab ahold of in your mind’s eye. And yet by far the most popular tool we have for communicating these results is the PDF - literally a simulation of a piece of paper. Maybe we can do better.
 > The Scientific Paper is Obsolete (James Somers, The Atlantic)
-
+>
 > The charts that made it into the paper - a Nobel Prize winning paper - are incredibly difficult for me to understand. I remember looking at this and thinking: "How am I ever going to explain this to the public, to my audience?"
 > Design for an Audience (Jonathan Corum, The New York Times)
 
@@ -54,11 +54,13 @@ In Fig. 3 of this paper we show the relative number of stations with temperature
 
 While Sanderson (1999) [^3] has argued that it is time for modern atmospheric scientists to develop a new classification of climates, the Köppen classification continues to be the one most widely used in teaching. If we take as an example the textbooks of Arthur Strahler that are in very wide use in the English speaking world, it is the case that despite Strahler's own attempt to produce a new climate classification (see, for example, Strahler, 1971 [^4]) the latest edition of this series of texts still uses the Köppen system (Strahler and Strahler, 2005). [^5]
 
-The use of Köppen's classification is not confined to teaching. Many researches routinely use it for their own particular research purposes. The present authors have used it as the basis for grouping rivers by climate type around the world in order to facilitate comparisons of runoff characteristics (McMahon et al., 1992; [^6] Peel et al., 2004 [^7]). Lohmann et al. (1993) [^8] have applied the Köppen classification to the output from both atmosphere general circulation models and coupled atmosphere-ocean circulation models and compared these to maps of the Köppen classification using modern data sets and to Köppen's 1923 map. They modelled both present conditions and enhanced greenhouse scenarios and concluded:
+The use of Köppen's classification is not confined to teaching. Many researches routinely use it for their own particular research purposes. The present authors have used it as the basis for grouping rivers by climate type around the world in order to facilitate comparisons of runoff characteristics (McMahon et al., 1992; [^6] Peel et al., 2004 [^7]  ). Lohmann et al. (1993) [^8] have applied the Köppen classification to the output from both atmosphere general circulation models and coupled atmosphere-ocean circulation models and compared these to maps of the Köppen classification using modern data sets and to Köppen's 1923 map. They modelled both present conditions and enhanced greenhouse scenarios and concluded:
 
 >However, the Köppen classification is easier to apply and is still a useful tool for estimating the ability of climate models to reproduce the present climate as well as indicate the impact of climate changes on the biosphere.
 
 No doubt Köppen would have been pleased with this assessment.
+
+---
 
 [^1]: Wilcock, A. A.: Köppen after fifty years, Ann. Assoc. Am. Geog.,58(1), 12–28, 1968.
 [^2]: Thornthwaite, C. W.: Problems in the classification of climates, Ge-ogr. Rev., 33(2), 233–255, 1943.
