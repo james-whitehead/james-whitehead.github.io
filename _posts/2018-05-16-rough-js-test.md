@@ -9,81 +9,10 @@ comments: true
 <canvas id="canvas" width="800" height="600"></canvas>
 <script>
     const rc = rough.canvas(document.getElementById('canvas'));
-
-    //line and rectangle
-    rc.rectangle(10, 10, 100, 100);
-    rc.rectangle(140, 10, 100, 100, {
-      fill: 'rgba(255,0,0,0.2)',
-      fillStyle: 'solid',
-      roughness: 2
-    });
-    rc.rectangle(10, 130, 100, 100, {
-      fill: 'red',
-      stroke: 'blue',
-      hachureAngle: 60,
-      hachureGap: 10,
-      fillWeight: 5,
-      strokeWidth: 5
-    });
-
-    // ellipse and circle
-    rc.ellipse(350, 50, 150, 80);
-    rc.ellipse(610, 50, 150, 80, {
-      fill: 'blue'
-    });
-    rc.circle(480, 50, 80, {
-      stroke: 'red', strokeWidth: 2,
-      fill: 'rgba(0,255,0,0.3)', fillStyle: 'solid'
-    });
-
-    //overlapping circles
-    rc.circle(480, 150, 80, {
-      stroke: 'red', strokeWidth: 4,
-      fill: 'rgba(0,255,0,1)', fillWeight: 4, hachureGap: 6
-    });
-    rc.circle(530, 150, 80, {
-      stroke: 'blue', strokeWidth: 4,
-      fill: 'rgba(255,255,0,1)', fillWeight: 4, hachureGap: 6
-    });
-
-    // linearPath and polygon
-    rc.linearPath([[690, 10], [790, 20], [750, 120], [690, 100]], {
-      roughness: 0.7,
-      stroke: 'red', strokeWidth: 4
-    });
-    rc.polygon([[690, 130], [790, 140], [750, 240], [690, 220]]);
-    rc.polygon([[690, 250], [790, 260], [750, 360], [690, 340]], {
-      stroke: 'red', strokeWidth: 4,
-      fill: 'rgba(0,0,255,0.2)', fillStyle: 'solid'
-    });
-    rc.polygon([[690, 370], [790, 385], [750, 480], [690, 460]], {
-      stroke: 'red',
-      hachureAngle: 65,
-      fill: 'rgba(0,0,255,0.6)'
-    });
-
-    // arcs
-    rc.arc(350, 200, 200, 180, Math.PI, Math.PI * 1.6);
-    rc.arc(350, 300, 200, 180, Math.PI, Math.PI * 1.6, true);
-    rc.arc(350, 300, 200, 180, 0, Math.PI / 2, true, {
-      stroke: 'red', strokeWidth: 4,
-      fill: 'rgba(255,255,0,0.4)', fillStyle: 'solid'
-    });
-    rc.arc(350, 300, 200, 180, Math.PI / 2, Math.PI, true, {
-      stroke: 'blue', strokeWidth: 2,
-      fill: 'rgba(255,0,255,0.4)'
-    });
-
-    // draw sine curve
-    let points = [];
-    for (let i = 0; i < 20; i++) {
-      // 4pi - 400px
-      let x = (400 / 20) * i + 10;
-      let xdeg = (Math.PI / 100) * x;
-      let y = Math.round(Math.sin(xdeg) * 90) + 500;
-      points.push([x, y]);
-    }
-    rc.curve(points, {
-      roughness: 1.2, stroke: 'red', strokeWidth: 3
+    // heart
+    rc.path("M18.028 33.45l-.394-.404c-.821-.843-11.531-11.81-12.972-13.261C1.525 16.627 0 13.439 0 10.041 0 4.504 4.412 0 9.834 0c3.317 0 6.387 1.702 8.199 4.493C19.887 1.676 22.935 0 26.227 0c5.422 0 9.834 4.504 9.834 10.041 0 3.398-1.523 6.586-4.659 9.745-1.167 1.174-8.43 8.607-11.531 11.781l-1.843 1.883zM9.834 1.103", {
+        stroke: '#Ef233C',
+        fill: '#C0EBF9',
+        hachureGap: 3
     });
 </script>
