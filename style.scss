@@ -169,9 +169,9 @@ img {
 
 pre.highlight {
   font-size: 14px;
-  white-space: pre-wrap;
+  white-space: pre-wrap !important;
   overflow: auto;
-  word-wrap: break-word;
+  word-wrap: break-word !important;
   /* horizontal scrolling */
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
