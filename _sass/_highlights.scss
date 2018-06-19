@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 pre.highlight {
-  font-size: 14px;
+  font-size: 16px;
   white-space: pre-wrap; 
   overflow: auto; 
   word-wrap: break-word;
@@ -15,6 +15,7 @@ pre.highlight {
 
 code {
   font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
 }
 
 .highlight .c { color: #999999; font-style: italic } /* Comment */
