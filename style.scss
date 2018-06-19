@@ -112,6 +112,10 @@ a:after {
   width: 96%;
 }
 
+.entry a, a:visited, a:hover, a:active {
+  text-decoration: underline;
+}
+
 .entry a:after {
   height: 0px;
 }
@@ -341,10 +345,6 @@ nav {
   .read-more {
     text-transform: uppercase;
     font-size: 15px;
-  }
-  
-  a, a:visited, a:hover, a:active {
-  	text-decoration: underline;
   }
 }
 
