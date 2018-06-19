@@ -68,4 +68,4 @@ Proxy		10.0.0.42:8080
 
 To find your own proxy values, search in the Start Menu for 'Internet Options', and under the Connections tab, open up the LAN Settings.
 
-![internet-options]({{ site.url }}/assets/img/internet-properties.png) ![lan-settings]({{ site.url }}/assets/img/lan-settings.png)
+![proxy-settings]({{ site.url }}/assets/img/proxy-settings.png)
