@@ -154,6 +154,6 @@ Either some of the config settings are wrong, or your proxy is a different beast
 
 ## Using CNTLM
 
-Now that CNTLM is set up and you've verified it's working, how do you actually use it?
+Now that CNTLM is set up and you've verified it's working, how do you actually use it? Beneath the proxy settings in `cntlm.ini`, you'll see a field titled `Listen`. The default value is `3128`. This is the port, which, along with your local host `127.0.0.1`, CNTLM runs on.
 
 
