@@ -156,8 +156,22 @@ Either some of the config settings are wrong, or your proxy is a different beast
 
 Now that CNTLM is set up and you've verified it's working, how do you actually use it? Beneath the proxy settings in `cntlm.ini`, you'll see a field titled `Listen`. The default value is `3128`. This is the port, which - along with your local host `127.0.0.1` - CNTLM runs on. Anywhere you see a proxy setting, the `<proxy_address>:<proxy_port>` pair can be replaced with `127.0.0.1:3128`, and CNTLM will handle the authentication! The port can be set to any value, so if it's not working for 3128, that port may already be in use by another process.
 
+### Starting CNTLM
+
+CNTLM is started through the command line, in a similar method to how you got the password hashes and verified it worked. Running the following command and entering your password will run CNTLM and keep the window open, letting you see all the requests it handles:
+
+```
+
+
+### Using CNTLM with applications
+
 Each application will have their own proxy menu and settings, but here are some ways of setting them up with some common command line programs:
 
+### `curl`, `pip`, `wget`, etc.
+
+These programs use your Windows-wide proxy settings. These can be set using `set` in a command prompt, or `$env` in Powershell:
+
+```cmd
 
 
 
