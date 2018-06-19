@@ -15,9 +15,9 @@ This server could not verify that you are authorized to access the document requ
 ```
 
 ```
-Collecting pep8
+Collecting requests
   Retrying (Retry(total=4, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x0000023873264B70>, 'Connection to pypi.python.org timed out. (connect timeout=15)')'
-No matching distribution found for pep8
+No matching distribution found for requests
 ```
 
 ```
@@ -26,7 +26,7 @@ http://github.com/james-whitehead/james-whitehead.github.io.git/info/refs
 fatal: HTTP request failed
 ```
 
-This means you're behind [NTLM](https://en.wikipedia.org/wiki/NT_LAN_Manager), a very strict proxy that requires Windows authentication to let applications through. This works fine for browsers that support NTLM, but many applications (especially command-line applications such as curl, pip and git given in the examples) do not support this level of authentication and won't be able to get through the proxy.
+This means you're behind [NTLM,](https://en.wikipedia.org/wiki/NT_LAN_Manager) a very strict proxy that requires Windows authentication to let applications through. This works fine for browsers that support NTLM, but many applications (especially command-line applications such as curl, pip and git given in the examples) do not support this level of authentication and won't be able to get through the proxy.
 
 Luckily, there's a solution. A utility that sits in between your applications and the proxy and handles all the authentication, called [CNTLM.](http://cntlm.sourceforge.net/)
 
@@ -68,4 +68,17 @@ Proxy		10.0.0.42:8080
 
 To find your own proxy values, search in the Start Menu for 'Internet Options', and under the Connections tab, open up the LAN Settings.
 
-![{{ site.url }}/assets/img/proxy-settings.png]({{ site.url }}/assets/img/proxy-settings.png)
+![proxy settings]({{ site.url }}/assets/img/proxy-settings.png)
+
+If the IP address and port for the proxy aren't immediately visible, copy the URL in the address bar into a browser to download it, and open it up in a text editor. If the filename ends with `.pac` and the file consists of a JavaScrip function called `FindProxyForURL(url, host)`, then this is a [PAC file.](https://en.wikipedia.org/wiki/Proxy_auto-config)
+
+To find your proxy within the PAC file, look for any lines with the form `return "PROXY <proxy_ip>:<proxy_ort>";`. Each unique pair of IP address and port should replace the entry in the `cntlm.ini` file. If there is only one proxy, one of the lines in `cntlm.ini` can be deleted. Given the example in the Wikipedia page, The `cntlm.ini` file would look like this:
+
+```python
+# List of parent proxies to use. More proxies can be defined
+# one per line in format <proxy_ip>:<proxy_port>
+#
+Proxy		fastproxy.example.com:8080
+Proxy		proxy.example.com:8080
+```
+
