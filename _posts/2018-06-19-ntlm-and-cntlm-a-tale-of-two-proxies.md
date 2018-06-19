@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## NTLM and CNTLM: A Tale of Two Proxies
 
