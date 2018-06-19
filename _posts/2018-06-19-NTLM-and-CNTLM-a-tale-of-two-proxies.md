@@ -56,7 +56,7 @@ If you don't know your username or domain, opening up Powershell and running `$e
 
 The proxy values can be found in this section.
 
-```
+```python
 # List of parent proxies to use. More proxies can be defined
 # one per line in format <proxy_ip>:<proxy_port>
 #
