@@ -74,7 +74,7 @@ p {
 }
 
 a, a:visited, a:hover, a:active {
-  text-decoration: none;
+  text-decoration: underline;
   color: $light-blue;
   position: relative;
   transition: 0.5s color ease;
