@@ -3,6 +3,7 @@ published: true
 layout: post
 excerpt: Setting up applications to work with a corporate proxy
 comments: true
+title: NTLM and CNTLM - A Tale of Two Proxies
 ---
 ## Introducton
 
