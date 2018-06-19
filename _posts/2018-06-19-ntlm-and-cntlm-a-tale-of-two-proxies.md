@@ -44,3 +44,11 @@ Collecting pep8
   Could not find a version that satisfies the requirement pep8 (from versions: )
 No matching distribution found for pep8
 ```
+
+```powershell
+PS C:\&gt; git clone http:&#x2F;&#x2F;github.com&#x2F;james-whitehead&#x2F;james-whitehead.github.io.git folder
+Cloning into &#x27;folder&#x27;...
+error: The requested URL returned error: 407 while accessing
+http:&#x2F;&#x2F;github.com&#x2F;james-whitehead&#x2F;james-whitehead.github.io.git&#x2F;info&#x2F;refs
+fatal: HTTP request failed
+```
