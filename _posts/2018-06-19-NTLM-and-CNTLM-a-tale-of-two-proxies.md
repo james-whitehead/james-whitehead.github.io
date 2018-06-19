@@ -50,6 +50,7 @@ The first values we need to set are the username and domain fields. You should s
 # Username	testuser
 # Domain	corp-uk
 ```
+
 If you don't know your username or domain, opening up Powershell and running `$env:Username` and `$env:UserDomain` will return the values. Replace the `testuser` and `corp-uk` with your own username and domain, and uncomment the line by removing the `#` from the start.
 
 ### Proxy
@@ -64,7 +65,6 @@ Proxy		10.0.0.41:8080
 Proxy		10.0.0.42:8080
 ```
 
-To find your own proxy values
+To find your own proxy values, search in the Start Menu for 'Internet Options', and under the Connections tab, open up the LAN Settings.
 
-
-
+[!internet-options]({{ site.url }}/assets/img/internet-properties.png) [!lan-settings]({{ site.url }}/assets/img/lan-settings.png)
