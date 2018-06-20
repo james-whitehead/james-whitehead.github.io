@@ -160,18 +160,58 @@ Now that CNTLM is set up and you've verified it's working, how do you actually u
 
 CNTLM is started through the command line, in a similar method to how you got the password hashes and verified it worked. Running the following command and entering your password will run CNTLM and keep the window open, letting you see all the requests it handles:
 
+```cmd
+C:\Program Files\CNTLM>.\cntlm.exe -c cntlm.ini -I -f
 ```
-
 
 ### Using CNTLM with applications
 
 Each application will have their own proxy menu and settings, but here are some ways of setting them up with some common command line programs:
 
-### `curl`, `pip`, `wget`, etc.
+### curl, pip, wget
 
 These programs use your Windows-wide proxy settings. These can be set using `set` in a command prompt, or `$env` in Powershell:
 
 ```cmd
+C:\>set http_proxy="http://127.0.0.1:3128"
+C:\>set https_proxy="https://127.0.0.1:3128"
+```
 
+```powershell
+PS C:\> $env:http_proxy="http://127.0.0.1:3128"
+PS C:\> $env:https_proxy="https://127.0.0.1:3128"
+```
 
+These examples are using the default listening port of 3128. If you've changed that, you'll also need to change the port you set the proxy too.
 
+### git
+
+Git uses its own proxy settings instead of your environment settings. This does mean that the commands are the same regardless of whether you use a command prompt or Powershell window.
+
+```cmd
+C:\>git config --global http.proxy http://127.0.0.1:3128
+C:\>git config --global https.proxy https://127.0.0.1:3128
+```
+
+### Virtual machines
+
+As a bonus, you can also set virtual machines to communicate through the CNTLM proxy running on the host machine! The following settings are for an Ubuntu machine running on VirtualBox, so you may need to adjust them depending on your OS or virtualisation software.
+
+The only network adapter is attached to NAT, with all settings left as the defaults. Port forwarding isn't necessary.
+
+![vm settings]({{ site.url }}/assets/img/vm-settings.png)
+
+In VirtualBox, the address `10.0.2.2` in the guest OS maps directly to the localhost address of the host machine. So, because CNTLM runs on the localhost of your host machine, instead of using `127.0.0.1:3128`, you need to use `10.0.2.2:3128`.
+
+```sh
+~$ export http_proxy='10.0.2.2:3128'
+~$ export https_proxy='10.0.2.2:3128'
+```
+
+## Conclusion
+
+You should now be able to use CNTLM as a proxy to authorise any applications, even if they don't support NTLM! As long as you can change the proxy settings of an application, you can use them to communicate through your corporate proxy. This will hopefully make any development a lot easier and free you up to use whatever tools you like.
+
+Just remember the magic address: `127.0.0.1:3128`.
+
+(or whatever you set the port to)
