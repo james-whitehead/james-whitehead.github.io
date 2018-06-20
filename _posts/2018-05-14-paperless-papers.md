@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Paperless Papers
 excerpt: Redesigning scientific papers for modern media
