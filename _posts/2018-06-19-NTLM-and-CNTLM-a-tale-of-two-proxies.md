@@ -9,18 +9,18 @@ title: NTLM and CNTLM - A Tale of Two Proxies
 
 If you're behind a corporate proxy, you might have seen this before. You might have seen this lots of times before.
 
-```cmd
+```console
 curl : Proxy Authentication Required
 This server could not verify that you are authorized to access the document requested. Either you supplied the wrong credentials (e.g., bad password), or your browser doesn't understand how to supply the credentials required.
 ```
 
-```cmd
+```console
 Collecting requests
   Retrying (Retry(total=4, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x0000023873264B70>, 'Connection to pypi.python.org timed out. (connect timeout=15)')'
 No matching distribution found for requests
 ```
 
-```cmd
+```console
 error: The requested URL returned error: 407 while accessing
 http://github.com/james-whitehead/james-whitehead.github.io.git/info/refs
 fatal: HTTP request failed
@@ -78,7 +78,7 @@ To find your proxy within the PAC file, look for any lines with the following:
 return "PROXY <proxy_ip>:<proxy_port>";
 ```
 
-. Each unique pair of IP address and port should replace the entry in the `cntlm.ini` file. If there is only one proxy, one of the lines in `cntlm.ini` can be deleted. Given the example in the Wikipedia page, The `cntlm.ini` file would look like this:
+Each unique pair of IP address and port should replace the entry in the `cntlm.ini` file. If there is only one proxy, one of the lines in `cntlm.ini` can be deleted. Given the example in the Wikipedia page, The `cntlm.ini` file would look like this:
 
 ```python
 # List of parent proxies to use. More proxies can be defined
@@ -94,13 +94,13 @@ The password fields come before the proxy fields, but it's necessary to configur
 
 Make sure you've saved your changes up to this point, and in the directory you installed CNTLM, open up a command prompt and run the following:
 
-```cmd
+```console
 C:\Program Files\CNTLM>.\cntlm.exe -c cntlm.ini -H
 ```
 
 After entering the password for the account you gave in the `Username` and `Domain` fields, you should receive an output that looks like this:
 
-```cmd
+```console
 Password:
 PassLM          1AD35398BE6565DDB5C4EF70C0593492
 PassNT          77B9081511704EE852F94227CF48A793
@@ -123,13 +123,13 @@ Don't forget to remove the `#` tags for the three fields!
 
 We've changed a lot of settings, and it'd be nice to know if they've all worked. CNTLM has a utility for that too! Still in the CNTLM directory, run the following:
 
-```cmd
+```console
 C:\Program Files\CNTLM>.\cntlm.exe -M https://www.google.co.uk
 ```
 
 Enter your password again, and if all your settings are correct, you should see an output like this:
 
-```cmd
+```console
 Config profile  1/4... OK (HTTP code: 200)
 ----------------------------[ Profile  0 ]------
 Auth            NTLMv2
@@ -141,7 +141,7 @@ Success! You can now go back to your password fields and re-comment out the two 
 
 If you see the following:
 
-```cmd
+```console
 Config profile  1/4... Credentials rejected
 Config profile  2/4... Credentials rejected
 Config profile  3/4... Credentials rejected
@@ -160,7 +160,7 @@ Now that CNTLM is set up and you've verified it's working, how do you actually u
 
 CNTLM is started through the command line, in a similar method to how you got the password hashes and verified it worked. Running the following command and entering your password will run CNTLM and keep the window open, letting you see all the requests it handles:
 
-```cmd
+```console
 C:\Program Files\CNTLM>.\cntlm.exe -c cntlm.ini -I -f
 ```
 
@@ -172,7 +172,7 @@ Each application will have their own proxy menu and settings, but here are some 
 
 These programs use your Windows-wide proxy settings. These can be set using `set` in a command prompt, or `$env` in Powershell:
 
-```cmd
+```console
 C:\>set http_proxy="http://127.0.0.1:3128"
 C:\>set https_proxy="https://127.0.0.1:3128"
 ```
@@ -188,7 +188,7 @@ These examples are using the default listening port of 3128. If you've changed t
 
 Git uses its own proxy settings instead of your environment settings. This does mean that the commands are the same regardless of whether you use a command prompt or Powershell window.
 
-```cmd
+```console
 C:\>git config --global http.proxy http://127.0.0.1:3128
 C:\>git config --global https.proxy https://127.0.0.1:3128
 ```
