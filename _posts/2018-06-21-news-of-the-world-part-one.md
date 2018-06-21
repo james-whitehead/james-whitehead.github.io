@@ -44,4 +44,52 @@ Leaflet is a beautifully simple mapping library that handles all the layers of m
 
 Given how much it takes for even the basic elements of a mapping library, you can see why it's much easier to not reinvent the wheel. Look through [Leaflet's GitHub page](https://github.com/Leaflet/Leaflet) for a bit to see how much work went into its 378 KB of source code.
 
+I needed Leaflet to be able to show a map and determine the location that map is clicked on, and, as luck would have it, both of these features are detailed in their [quick start guide!](https://leafletjs.com/examples/quick-start/)
+
+Setting up a Leaflet map is as easy as creating a `<div>` element in the body of an HTML page:
+
+```html
+<div id="map" style="width: 600px; height: 600px;"></div>
+```
+
+Creating a map, assigning it to the `<div>` element, and giving it a pair of latitude/longitude coordinates and a zoom level:
+
+```javascript
+let map = L.map('map').setView([54, -2.5], 5);
+```
+
+Choosing a provider for the images to go on the tile layer:
+
+```javascript
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+  maxZoom: 18,
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+  	'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+  	'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  id: 'mapbox.streets'
+}).addTo(map);
+```
+
+Creating a popup and assigning a function to that popup:
+
+```javascript
+let popup = L.popup();
+
+function onMapClick(event) {
+  popup
+    .setLatLng(event.latlng)
+    .setContent(event.latlng.toString())
+    .openOn(map);
+}
+```
+
+Attaching that function to the map
+
+```javascript
+map.on('click', onMapClick);
+```
+
+And then you have a fully-functional map in less than 20 lines of code!
+
+[!
 
