@@ -31,4 +31,6 @@ It takes a mixture of prior knowledge and experience and some searching around t
 
 As it turns out, the potentially existing Google News API didn't actually exist. Or, rather, it had been deprecated and replaced with a restructive, paid service in typical Google fashion. I had a short look at [News API](https://newsapi.org/), which admittedly has a very generous free package for non-commercial, open-source developers, but the daily rate limit made me uneasy. Fortunately, [a kind Stack Overflow answer](https://stackoverflow.com/a/7829688/) provided a sneaky workaround for the Google problem: while the official API had been replaced, you could still request an RSS feed for a more stripped-down search result. It's not as ideal as an API, but it's workable.
 
-As for the mapping library itself, the first one I stumbled on as
+As for the mapping library itself, the first one I stumbled on was [Leaflet,](https://leafletjs.com/) which turns out to be pretty much perfect! It's very lightweight and easy to get up off the ground. Some people might find it lacking for anything advanced, but for loading and interacting with a map of the world, it's probably the best JavaScript library out there.
+
+## Learning Leaflet
