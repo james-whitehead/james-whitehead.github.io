@@ -9,6 +9,26 @@ News of the World is a (very) small JavaScript project about showing local news 
 
 ## Reinventing the Wheel
 
-One of the more common adages is "don't reinvent the wheel". The idea that part of the software you're trying to build has already been built by someone else and built better, so you should just use that. There are reasons to _not_ invent the wheel, of course, but it's quicker, easier and safer to use pre-existing libraries and frameworks.
+One of the more common adages is "don't reinvent the wheel". The idea that part of the software you're trying to build has already been built by someone else and built better, so you should just use that. There are reasons to _not_ invent the wheel, of course, but it's quicker, easier and safer to use pre-existing libraries, frameworks and APIs.
 
-Going down this route, however, has its own problem. Which wheels do you actually use? The JavaScript ecosystem is especially enormous, and it's easy to get paralysed with indecision over what to use. Do you use vanilla JavaScript, or do you use a framework? If you're using a framework, do you use Node, Angular, React, Vue, or something else entirely? If you're using a framework, do you need a package manager, a build system and a transpiler? If you do, which ones do you choose? If you're on the peripheries of web development, like I am, some of these decisions can seem impossible. [_How it feels to learn JavaScript in 2016_](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f) is a slightly hyperbolic and very relatable view of how trying to get started in this feels. In the end, I settled on using pure JavaScript, because many of the frameworks seem to revolve around making single-page apps. While News of the World only uses a single page, this is because it's simple enough to do so anyway.
+Going down this route, however, has its own problem: Which wheels do you actually use? The JavaScript ecosystem is especially enormous, and it's easy to get paralysed with indecision over what to use. Do you use vanilla JavaScript, or do you use a framework? If you're using a framework, do you use Node, Angular, React, Vue, or something else entirely? If you're using a framework, do you need a package manager, a build system and a transpiler? If you do, which ones do you choose? If you're on the peripheries of web development, like I am, some of these decisions can seem impossible. [_How it feels to learn JavaScript in 2016_](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f) is a slightly hyperbolic and very relatable view of how trying to get started in this feels. In the end, I settled on using pure JavaScript, because many of the frameworks seem to revolve around making single-page apps. While News of the World only uses a single page, this is because it's simple enough to do so anyway.
+
+With a language nailed down, it was time to decide on which libraries and APIs to use. It's useful to think about what it is your application is doing, and dividing up those basic features into services that can perform them.
+
+In this case, News of the World does two simple things:
+
+- Show a map for the user to click on.
+- Show news headlines for the region the user clicked.
+
+In terms of services, this can be thought of as:
+
+- Something to show the map.
+- Something to determine the location the user clicked on.
+- Something to get the headlines from that area.
+- Something to show those headlines.
+
+It takes a mixture of prior knowledge and experience and some searching around to figure out which libraries to use. My (rather small amount of) prior knowledge and experience got me as far as suggesting some potentially existing Google News API to get the headlines and a Bootstrap modal popup to show them.
+
+As it turns out, the potentially existing Google News API didn't actually exist. Or, rather, it had been deprecated and replaced with a restructive, paid service in typical Google fashion. I had a short look at [News API](https://newsapi.org/), which admittedly has a very generous free package for non-commercial, open-source developers, but the daily rate limit made me uneasy. Fortunately, [a kind Stack Overflow answer](https://stackoverflow.com/a/7829688/) provided a sneaky workaround for the Google problem: while the official API had been replaced, you could still request an RSS feed for a more stripped-down search result. It's not as ideal as an API, but it's workable.
+
+As for the mapping library itself, the first one I stumbled on as
