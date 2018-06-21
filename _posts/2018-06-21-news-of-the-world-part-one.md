@@ -93,4 +93,28 @@ And that's a fully-functional map in less than 20 lines of code!
 
 ![leaflet map]({{ site.url }}/assets/img/leaflet-map.png)
 
-## Off the Edge of the World
+## Colouring In
+
+Given Leaflet's simplicity, you might not expect it to be very customisable, but there's a _lot_ of scope in the base library to tweak it how you want. One of the main functionalities is being able to swap in and out tile layers to entirely change how your map looks. This is as easy as changing the URL when creating a `TileLayer`. Like a lot of other open-source projects, Leaflet enjoys a lot of support from the rest of the open-source community who provide free-to-use layers. The [leaflet-providers](https://github.com/leaflet-extras/leaflet-providers) extension streamlines the creation of layers from different providers (although it's easier and more lightweight to just nab the code from their very handy [preview page](https://leaflet-extras.github.io/leaflet-providers/preview/)). Out of all of these, the most eyecatching one was Stamen's Watercolor layer. It doesn't come with any labels, but Stamen also provide a standalone layer for labels. After changing the URL, adding another layer is done in exactly the same way as the first:
+
+```javascript
+L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}{r}.png', {
+  maxZoom: 18,
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+  	'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+  	'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  id: 'mapbox.streets'
+}).addTo(map);
+
+L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.png', {
+  maxZoom: 18,
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+  	'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+  	'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  id: 'mapbox.streets'
+}).addTo(map);
+```
+
+And that's all it takes to get a fantastic-looking watercolour map!
+
+![watercolour map]({{ site.url }}/assets/img/watercolour-map.png)
