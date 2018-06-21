@@ -2,7 +2,7 @@
 published: false
 title: News of the World - Part One
 layout: post
-excerpt: Developing a map of the news
+excerpt: Choosing and configuring the Leaflet library
 comments: true
 ---
 News of the World is a (very) small JavaScript project about showing local news headlines on a world map. All the ideas, pitfalls and workarounds found during development will be documented here in a semi-blog/semi-tutorial. This is part one.
