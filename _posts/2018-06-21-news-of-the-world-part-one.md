@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: News of the World - Part One
 layout: post
 excerpt: Choosing and configuring the Leaflet library
