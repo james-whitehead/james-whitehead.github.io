@@ -73,15 +73,15 @@ p {
   margin: 15px 0;
 }
 
-p > a {
-	text-decoration: underline;
-}
-
 a, a:visited, a:hover, a:active {
   text-decoration: none;
   color: $light-blue;
   position: relative;
   transition: 0.5s color ease;
+}
+
+p > a, p > a:visited, p > a:hover, p > a:active {
+	text-decoration: underline;
 }
 
 a:hover {
