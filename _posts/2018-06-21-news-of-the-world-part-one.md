@@ -34,3 +34,14 @@ As it turns out, the potentially existing Google News API didn't actually exist.
 As for the mapping library itself, the first one I stumbled on was [Leaflet,](https://leafletjs.com/) which turns out to be pretty much perfect! It's very lightweight and easy to get up off the ground. Some people might find it lacking for anything advanced, but for loading and interacting with a map of the world, it's probably the best JavaScript library out there.
 
 ## Learning Leaflet
+
+Leaflet is a beautifully simple mapping library that handles all the layers of more advanced, paid software like Google Maps or ESRI, made up of:
+
+- The tile layer: A series of raster or vector images assembled in a grid that forms the base of the map.
+- The overlay layer: Any additional markers, lines or polygons that are drawn over the tile layer.
+- The popup layer: An additional layer for popups to appear on if you click on the tile layer or an element in the overlay layer.
+- The control layer: Controls for panning and zooming across the map.
+
+Given how much it takes for even the basic elements of a mapping library, you can see why it's much easier to not reinvent the wheel. Look through [Leaflet's GitHub page](https://github.com/Leaflet/Leaflet) for a bit to see how much work went into its 378 KB of source code.
+
+
