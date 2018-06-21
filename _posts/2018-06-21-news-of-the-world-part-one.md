@@ -83,7 +83,7 @@ function onMapClick(event) {
 }
 ```
 
-Attaching that function to the map
+Attaching that function to the map:
 
 ```javascript
 map.on('click', onMapClick);
