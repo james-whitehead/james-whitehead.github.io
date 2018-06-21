@@ -91,5 +91,4 @@ map.on('click', onMapClick);
 
 And then you have a fully-functional map in less than 20 lines of code!
 
-[!
-
+![leaflet map]({{ site.url }}/assets/img/leaflet-map.png)
