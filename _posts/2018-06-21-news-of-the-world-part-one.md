@@ -92,3 +92,5 @@ map.on('click', onMapClick);
 And that's a fully-functional map in less than 20 lines of code!
 
 ![leaflet map]({{ site.url }}/assets/img/leaflet-map.png)
+
+## Off the Edge of the World
