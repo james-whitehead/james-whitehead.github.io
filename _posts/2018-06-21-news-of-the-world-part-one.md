@@ -105,17 +105,25 @@ Like a lot of other open-source projects, Leaflet enjoys a lot of support from t
 ```javascript
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}{r}.png', {
   maxZoom: 18,
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-  	'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-  	'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  attribution: 'Map tiles by <a href="http://stamen.com">' +
+    'Stamen Design</a>, ' +
+    '<a href="http://creativecommons.org/licenses/by/3.0">' +
+    'CC BY 3.0</a> &mdash; ' +
+    'Map data &copy; ' +
+    '<a href="http://www.openstreetmap.org/copyright">' +
+    'OpenStreetMap</a>',
   id: 'mapbox.streets'
 }).addTo(map);
 
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.png', {
   maxZoom: 18,
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-  	'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-  	'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  attribution: 'Map tiles by <a href="http://stamen.com">' +
+    'Stamen Design</a>, ' +
+    '<a href="http://creativecommons.org/licenses/by/3.0">' +
+    'CC BY 3.0</a> &mdash; ' +
+    'Map data &copy; ' +
+    '<a href="http://www.openstreetmap.org/copyright">' +
+    'OpenStreetMap</a>',
   id: 'mapbox.streets'
 }).addTo(map);
 ```
