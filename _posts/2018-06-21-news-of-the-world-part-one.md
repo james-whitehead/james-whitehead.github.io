@@ -192,8 +192,7 @@ let stamenWatercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/wa
 
 There's also an option to use `LatLngBounds`, but...well...this works! And the map's not going to change, so it's an ugly yet affordable evil.
 
-(Oh, and the island was American Samoa. You can look on the map. It's right on the edge.)
-
+(Oh, and the island was American Samoa. You can see it on the map. It's right on the edge.)
 
 
 ## Addressing the problem
