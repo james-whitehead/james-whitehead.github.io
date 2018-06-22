@@ -7,7 +7,7 @@ comments: true
 ---
 News of the World is a (very) small JavaScript project about showing local news headlines on a world map. All the ideas, pitfalls and workarounds found during development will be documented here in a semi-blog/semi-tutorial. This is part one.
 
-## Reinventing the Wheel
+## Reinventing the wheel
 
 One of the more common adages is "don't reinvent the wheel". The idea that part of the software you're trying to build has already been built by someone else and built better, so you should just use that. There are reasons to _not_ invent the wheel, of course, but it's quicker, easier and safer to use pre-existing libraries, frameworks and APIs.
 
@@ -93,9 +93,11 @@ And that's a fully-functional map in less than 20 lines of code!
 
 ![leaflet map]({{ site.url }}/assets/img/leaflet-map.png)
 
-## Colouring In
+## Colouring in
 
-Given Leaflet's simplicity, you might not expect it to be very customisable, but there's a _lot_ of scope in the base library to tweak it how you want. One of the main functionalities is being able to swap in and out tile layers to entirely change how your map looks. This is as easy as changing the URL when creating a `TileLayer`. Like a lot of other open-source projects, Leaflet enjoys a lot of support from the rest of the open-source community who provide free-to-use layers. The [leaflet-providers](https://github.com/leaflet-extras/leaflet-providers) extension streamlines the creation of layers from different providers (although it's easier and more lightweight to just nab the code from their very handy [preview page](https://leaflet-extras.github.io/leaflet-providers/preview/)). Out of all of these, the most eyecatching one was Stamen's Watercolor layer. It doesn't come with any labels, but Stamen also provide a standalone layer for labels. After changing the URL, adding another layer is done in exactly the same way as the first:
+Given Leaflet's simplicity, you might not expect it to be very customisable, but there's a _lot_ of scope in the base library to tweak it how you want. One of the main functionalities is being able to swap in and out tile layers to entirely change how your map looks. This is as easy as changing the URL when creating a `TileLayer`.
+
+Like a lot of other open-source projects, Leaflet enjoys a lot of support from the rest of the open-source community who provide free-to-use layers. The [leaflet-providers](https://github.com/leaflet-extras/leaflet-providers) extension streamlines the creation of layers from different providers (although it's easier and more lightweight to just nab the code from their very handy [preview page](https://leaflet-extras.github.io/leaflet-providers/preview/)). Out of all of these, the most eyecatching one was Stamen's Watercolor layer. It doesn't come with any labels, but Stamen also provide a standalone layer for labels. After changing the URL, adding another layer is done in exactly the same way as the first:
 
 ```javascript
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}{r}.png', {
@@ -118,3 +120,21 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{
 And that's all it takes to get a fantastic-looking watercolour map!
 
 ![watercolour map]({{ site.url }}/assets/img/watercolour-map.png)
+
+## Off the edge of the world
+
+Remember when I said the Leaflet map was fully-functional? That was a little bit of a lie. While it works as a map, there's a few edge cases that need some more options to sort out. And I mean literal 'edge' cases, because they're to do with the boundaries of the map.
+
+There are a few problems that our Leaflet configuration has right now, namely:
+
+- You can pan indefinitely up and down into a grey void of nothingness.
+- You can zoom so far out that you can see three copies of the world side-by-side.
+- Panning either left or right wraps the map nicely, but the latitude doesn't wrap with it.
+
+Discovering bugs is usually done through a series of rigorous and comprehensive tests, but in the case of the last problem, it was...not like that. First, a very quick refresher on how co-ordinates work. Any point on the earth can be mapped to a pair of points: the latitude (along a horizontal line between -180° and 180°) and the longitude (along a vertical line between -90° and 90°).
+
+## Addressing the problem
+
+Clicking on the map returns the co-ordinates, but there isn't an API that searches for news by co-ordinates (maybe that's a niche I could fill with a lot more knowledge and experience), so the latitude and longitude have to be resolved to an address. [OpenStreetMap's Normatin API](https://wiki.openstreetmap.org/wiki/Nominatim) is invaluable for this. It has a method called Reverse Geocoding which does all the resolving for us.
+
+So, let's update the `onMapClick` function to print out 
