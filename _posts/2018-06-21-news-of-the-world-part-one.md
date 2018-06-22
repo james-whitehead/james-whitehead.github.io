@@ -197,7 +197,7 @@ There's also an option to use `LatLngBounds`, but...well...this works! And the m
 
 ## Addressing the problem
 
-Clicking on the map returns the coordinates, but there isn't an API that searches for news by coordinates (maybe that's a niche I could fill with a lot more knowledge and experience), so the latitude and longitude have to be resolved to an address. [OpenStreetMap's Normatin API](https://wiki.openstreetmap.org/wiki/Nominatim) is invaluable for this. It has a method called Reverse Geocoding which does all the resolving for us.
+Clicking on the map returns the coordinates, but there isn't an API that searches for news by coordinates (maybe that's a niche I could fill with a lot more knowledge and experience), so the latitude and longitude have to be resolved to an address. [OpenStreetMap's Nomanatin API](https://wiki.openstreetmap.org/wiki/Nominatim) is invaluable for this. It has a method called Reverse Geocoding which does all the resolving for us.
 
 So, let's update the `onMapClick` function to print out the address! Rather than using an `XMLHttpRequest`, I thought I'd use the (relatively) fancy, (relatively) new [Fetch API:](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
@@ -216,7 +216,7 @@ function onMapClick(event) {
             'user-agent': window.navigator.userAgent,
             'content-type': 'application/json'
         },
-        method: 'POST',
+        method: 'GET',
         referrer: 'client'
     })
     .then(response => response.json())
@@ -228,5 +228,25 @@ function onMapClick(event) {
     });
 }
 ```
+
+This creates an HTTP GET request to OSM's Nominatin API with the latitude and longitude as parameters, JSON-ifies the response, and prints out the values under the `address` key. Let's click on somewhere in central London and see what the output looks like!
+
+```json
+{
+	"address": {
+		"hospital": "St Bartholomew's Hospital",
+		"road": "Little Britain",
+		"suburb": "Temple",
+		"city": "City of London",
+		"state_district": "Greater London",
+		"state": "England",
+		"postcode": "EC1M 6DS",
+		"country": "United Kingdom",
+		"country_code": "gb"
+	}
+}
+```
+
+Neat! So, we now have a map that gets the address of anywhere you click. For part two, we're going to see how we can use this to search!
 
 
