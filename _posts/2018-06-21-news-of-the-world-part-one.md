@@ -131,12 +131,20 @@ There are a few problems that our Leaflet configuration has right now, namely:
 - You can zoom so far out that you can see three copies of the world side-by-side.
 - Panning either left or right wraps the map nicely, but the latitude doesn't wrap with it.
 
-Discovering bugs is usually done through a series of rigorous and comprehensive tests, but in the case of the last problem, it was...not like that. First, a very quick refresher on how co-ordinates work. Any point on the earth can be mapped to a pair of points: the latitude (along a horizontal line between -180° and 180°) and the longitude (along a vertical line between -90° and 90°). Because the Earth is, well, round (sorry, flat-earthers), if you go past either end of the latitude or longitude lines, it wraps around right to the other end. [Here's a map for reference.](https://www.cia.gov/library/publications/resources/the-world-factbook/graphics/ref_maps/political/pdf/world.pdf)
+Discovering bugs is usually done through a series of rigorous and comprehensive tests, but in the case of the last problem, it was...not like that. First, a very quick refresher on how coordinates work. Any point on the earth can be mapped to a pair of points: the latitude (along a horizontal line between -180° and 180°) and the longitude (along a vertical line between -90° and 90°). Because the Earth is, well, round (sorry, flat-earthers), if you go past either end of the latitude or longitude lines, it wraps around right to the other end. [Here's a map for reference.](https://www.cia.gov/library/publications/resources/the-world-factbook/graphics/ref_maps/political/pdf/world.pdf)
 
-While I was admiring the watercolour map, I saw an unlabelled set of islands to the north-west of Fiji.
+While I was admiring the watercolour map, I saw an unlabelled island to the north-west of Fiji. I wondered what they were, and rather than looking it up normally, I thought I'd get the coordinates and look those up! Fiji has a latitude of 179°, so I was expecting the coordinates for this island to be about -170°, but it was...190°. Oh.
+
+As it turns out, Leaflet's tile layer wraps around by default, but the latitudes and longitudes from the click events don't. Luckily, this is a very easy fix! We just need to explicitly tell or coordinate values to wrap.
+
+```javascript
+let latlng = event.latlng.wrap();
+```
+
+
 
 ## Addressing the problem
 
-Clicking on the map returns the co-ordinates, but there isn't an API that searches for news by co-ordinates (maybe that's a niche I could fill with a lot more knowledge and experience), so the latitude and longitude have to be resolved to an address. [OpenStreetMap's Normatin API](https://wiki.openstreetmap.org/wiki/Nominatim) is invaluable for this. It has a method called Reverse Geocoding which does all the resolving for us.
+Clicking on the map returns the coordinates, but there isn't an API that searches for news by coordinates (maybe that's a niche I could fill with a lot more knowledge and experience), so the latitude and longitude have to be resolved to an address. [OpenStreetMap's Normatin API](https://wiki.openstreetmap.org/wiki/Nominatim) is invaluable for this. It has a method called Reverse Geocoding which does all the resolving for us.
 
 So, let's update the `onMapClick` function to print out 
