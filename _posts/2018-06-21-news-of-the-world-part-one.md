@@ -156,6 +156,27 @@ let stamenWatercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/wa
 });
 ```
 
+Stopping the user from panning outside the bounds of the map was a little more challenging, because while the `TileLayer` does have a bounds attribute, you need to set the value of those bounds yourself. This is one of those (embarrassingly many) cases [where you find a magic number solution from Stack Overflow,](https://stackoverflow.com/questions/35563627/how-to-prevent-leaflet-from-loading-tiles-outside-map-area) you stick it in to your code and it just...works, due to the fortuitousness of you having the same setup.
+
+```javascript
+let mapBounds = [[-8576 / 2, -8576 / 2], [8576 / 2, 8576 / 2]];
+
+let stamenWatercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}{r}.png', {
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
+            '<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; ' +
+            'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: mapMaxZoom,
+        minZoom: mapMinZoom,
+        bounds: mapBounds
+    });
+```
+
+There's also an option to use `LatLngBounds`, but...well...this works! And the map's not going to change, so it's an ugly yet affordable evil.
+
+(Oh, and the island was American Samoa. You can look on the map. It's right on the edge.)
+
+
+
 ## Addressing the problem
 
 Clicking on the map returns the coordinates, but there isn't an API that searches for news by coordinates (maybe that's a niche I could fill with a lot more knowledge and experience), so the latitude and longitude have to be resolved to an address. [OpenStreetMap's Normatin API](https://wiki.openstreetmap.org/wiki/Nominatim) is invaluable for this. It has a method called Reverse Geocoding which does all the resolving for us.
