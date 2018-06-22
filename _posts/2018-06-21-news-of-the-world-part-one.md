@@ -131,7 +131,9 @@ There are a few problems that our Leaflet configuration has right now, namely:
 - You can zoom so far out that you can see three copies of the world side-by-side.
 - Panning either left or right wraps the map nicely, but the latitude doesn't wrap with it.
 
-Discovering bugs is usually done through a series of rigorous and comprehensive tests, but in the case of the last problem, it was...not like that. First, a very quick refresher on how co-ordinates work. Any point on the earth can be mapped to a pair of points: the latitude (along a horizontal line between -180° and 180°) and the longitude (along a vertical line between -90° and 90°).
+Discovering bugs is usually done through a series of rigorous and comprehensive tests, but in the case of the last problem, it was...not like that. First, a very quick refresher on how co-ordinates work. Any point on the earth can be mapped to a pair of points: the latitude (along a horizontal line between -180° and 180°) and the longitude (along a vertical line between -90° and 90°). Because the Earth is, well, round (sorry, flat-earthers), if you go past either end of the latitude or longitude lines, it wraps around right to the other end. [Here's a map for reference.](https://www.cia.gov/library/publications/resources/the-world-factbook/graphics/ref_maps/political/pdf/world.pdf)
+
+While I was admiring the watercolour map, I saw an unlabelled set of islands to the north-west of Fiji.
 
 ## Addressing the problem
 
