@@ -159,11 +159,15 @@ let mapMaxZoom = 12;
 let mapMinZoom = 3;
 
 let stamenWatercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}{r}.png', {
-        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
-            '<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; ' +
-            'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        maxZoom: mapMaxZoom,
-        minZoom: mapMinZoom
+  attribution: 'Map tiles by <a href="http://stamen.com">' +
+    'Stamen Design</a>, ' +
+    '<a href="http://creativecommons.org/licenses/by/3.0">' +
+    'CC BY 3.0</a> &mdash; ' +
+    'Map data &copy; ' +
+    '<a href="http://www.openstreetmap.org/copyright">' +
+    'OpenStreetMap</a>',
+  maxZoom: mapMaxZoom,
+  minZoom: mapMinZoom
 });
 ```
 
@@ -173,13 +177,17 @@ Stopping the user from panning outside the bounds of the map was a little more c
 let mapBounds = [[-8576 / 2, -8576 / 2], [8576 / 2, 8576 / 2]];
 
 let stamenWatercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}{r}.png', {
-        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
-            '<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; ' +
-            'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        maxZoom: mapMaxZoom,
-        minZoom: mapMinZoom,
-        bounds: mapBounds
-    });
+  attribution: 'Map tiles by <a href="http://stamen.com">' +
+  	'Stamen Design</a>, ' +
+    '<a href="http://creativecommons.org/licenses/by/3.0">' +
+    'CC BY 3.0</a> &mdash; ' +
+    'Map data &copy; ' +
+    '<a href="http://www.openstreetmap.org/copyright">' +
+    'OpenStreetMap</a>',
+  maxZoom: mapMaxZoom,
+  minZoom: mapMinZoom,
+  bounds: mapBounds
+});
 ```
 
 There's also an option to use `LatLngBounds`, but...well...this works! And the map's not going to change, so it's an ugly yet affordable evil.
