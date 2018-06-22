@@ -233,16 +233,16 @@ This creates an HTTP GET request to OSM's Nominatin API with the latitude and lo
 
 ```json
 {
-	"address": {
-		"hospital": "St Bartholomew's Hospital",
-		"road": "Little Britain",
-		"suburb": "Temple",
-		"city": "City of London",
-		"state_district": "Greater London",
-		"state": "England",
-		"postcode": "EC1M 6DS",
-		"country": "United Kingdom",
-		"country_code": "gb"
+  "address": {
+	"hospital": "St Bartholomew's Hospital",
+    "road": "Little Britain",
+    "suburb": "Temple",
+    "city": "City of London",
+    "state_district": "Greater London",
+    "state": "England",
+    "postcode": "EC1M 6DS",
+    "country": "United Kingdom",
+    "country_code": "gb"
 	}
 }
 ```
