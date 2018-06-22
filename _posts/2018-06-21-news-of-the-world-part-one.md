@@ -141,7 +141,20 @@ As it turns out, Leaflet's tile layer wraps around by default, but the latitudes
 let latlng = event.latlng.wrap();
 ```
 
+Stopping the map from zooming out too far was another simple fix. The `TileLayer` object has a `minZoom` attribute that caps how far you can zoom out. There's also a `minZoom` atttribute, which I thought I'd set to a sensible level too.
 
+```javascript
+let mapMaxZoom = 12;
+let mapMinZoom = 3;
+
+let stamenWatercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}{r}.png', {
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
+            '<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; ' +
+            'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: mapMaxZoom,
+        minZoom: mapMinZoom
+});
+```
 
 ## Addressing the problem
 
