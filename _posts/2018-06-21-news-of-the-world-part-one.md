@@ -199,4 +199,34 @@ There's also an option to use `LatLngBounds`, but...well...this works! And the m
 
 Clicking on the map returns the coordinates, but there isn't an API that searches for news by coordinates (maybe that's a niche I could fill with a lot more knowledge and experience), so the latitude and longitude have to be resolved to an address. [OpenStreetMap's Normatin API](https://wiki.openstreetmap.org/wiki/Nominatim) is invaluable for this. It has a method called Reverse Geocoding which does all the resolving for us.
 
-So, let's update the `onMapClick` function to print out 
+So, let's update the `onMapClick` function to print out the address! Rather than using an `XMLHttpRequest`, I thought I'd use the (relatively) fancy, (relatively) new [Fetch API:](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
+```javascript
+function onMapClick(event) {
+    let latlng = event.latlng.wrap();
+    let url = 'https://nominatim.openstreetmap.org/reverse?' +
+        'format=json' +
+        `&lat=${latlng.lat}` +
+        `&lon=${latlng.lng}` +
+        '&addressdetails=1';
+    fetch(url, {
+        cache: 'default',
+        credentials: 'same-origin',
+        headers: {
+            'user-agent': window.navigator.userAgent,
+            'content-type': 'application/json'
+        },
+        method: 'POST',
+        referrer: 'client'
+    })
+    .then(response => response.json())
+    .then((output) => {
+        console.log(output.address);
+    })
+    .catch(err => {
+        throw err
+    });
+}
+```
+
+
