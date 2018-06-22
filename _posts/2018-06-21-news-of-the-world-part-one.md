@@ -142,7 +142,7 @@ There are a few problems that our Leaflet configuration has right now, namely:
 - You can zoom so far out that you can see three copies of the world side-by-side.
 - Panning either left or right wraps the map nicely, but the latitude doesn't wrap with it.
 
-Discovering bugs is usually done through a series of rigorous and comprehensive tests, but in the case of the last problem, it was...not like that. First, a very quick refresher on how coordinates work. Any point on the earth can be mapped to a pair of points: the latitude (along a horizontal line between -180° and 180°) and the longitude (along a vertical line between -90° and 90°). Because the Earth is, well, round (sorry, flat-earthers), if you go past either end of the latitude or longitude lines, it wraps around right to the other end. [Here's a map for reference.](https://www.cia.gov/library/publications/resources/the-world-factbook/graphics/ref_maps/political/pdf/world.pdf)
+Discovering bugs is usually done through a series of rigorous and comprehensive tests, but in the case of the last problem, it was...not like that. First, a very quick refresher on how coordinates work. Any point on the earth can be mapped to a pair of points: the latitude (along a horizontal line between -180° and 180°) and the longitude (along a vertical line between -90° and 90°). Because the Earth is, well, round (sorry, flat-earthers), if you go past either end of the latitude or longitude lines, it wraps around right to the other end.
 
 While I was admiring the watercolour map, I saw an unlabelled island to the north-west of Fiji. I wondered what they were, and rather than looking it up normally, I thought I'd get the coordinates and look those up! Fiji has a latitude of 179°, so I was expecting the coordinates for this island to be about -170°, but it was...190°. Oh.
 
@@ -192,7 +192,7 @@ let stamenWatercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/wa
 
 There's also an option to use `LatLngBounds`, but...well...this works! And the map's not going to change, so it's an ugly yet affordable evil.
 
-(Oh, and the island was American Samoa. You can see it on the map. It's right on the edge.)
+(Oh, and the island was American Samoa. [You can see it on a map.](https://www.cia.gov/library/publications/resources/the-world-factbook/graphics/ref_maps/political/pdf/world.pdf) It's right on the edge.)
 
 
 ## Addressing the problem
