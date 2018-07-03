@@ -1,22 +1,56 @@
 {
-    "rooms": [
-    {
-        "room": "Crafts Room",
-        "bundles": [
-            {
-          "name": "Spring Foraging Bundle",
-          "contents": [
-            {
-              "item": "Wild Horseradish",
-              "status": false
-            },
-            {
-              "item": "Daffodil",
-              "status": false
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"rooms": [{
+		"room": "Crafts Room",
+		"bundles": [{
+            "name": "Spring Foraging Bundle",
+            "contents": [{
+                "item": "Wild Horseradish",
+                "status": false
+            },{
+                "item": "Daffodil",
+                "status": false
+            },{
+                "item": "Leek",
+                "status": false
+            },{
+                "item": "Dandelion",
+                "status": false
+            }]
+        },{
+            "name": "Summer Foraging Bundle",
+            "contents": [{
+                "item": "Grape",
+                "status": false
+            },{
+                "item": "Spice Berry",
+                "status": false
+            },{
+                "item": "Sweet Pea",
+                "status": false
+            }]
+        },{
+            "name": "Fall Foraging Bundle",
+            "contents": [{
+                "item": "Common Mushroom",
+                "status": false
+            },{
+                "item": "Wild Plum",
+                "status": false
+            },{
+                "item": "Hazelnut",
+                "status": false
+            },{
+                "item": "Blackberry",
+                "status": false
+            }]
+        },{
+            "name": "Winter Foraging Bundle",
+            "contents": [{
+                "item": "Winter Root",
+                "status": false
+            },{
+                
+            }]
+        }]
+	}]
 }
