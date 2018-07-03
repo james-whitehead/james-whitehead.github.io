@@ -1,0 +1,22 @@
+{
+    "rooms": [
+    {
+        "room": "Crafts Room",
+        "bundles": [
+            {
+          "name": "Spring Foraging Bundle",
+          "contents": [
+            {
+              "item": "Wild Horseradish",
+              "status": false
+            },
+            {
+              "item": "Daffodil",
+              "status": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
