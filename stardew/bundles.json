@@ -1,7 +1,7 @@
 {
-	"rooms": [{
-		"room": "Crafts Room",
-		"bundles": [{
+    "rooms": [{
+        "room": "Crafts Room",
+        "bundles": [{
             "name": "Spring Foraging Bundle",
             "contents": [{
                 "item": "Wild Horseradish",
@@ -104,7 +104,7 @@
                 "status": false
             }]
         }]
-	},{
+    },{
         "room": "Pantry",
         "bundles": [{
             "name": "Spring Crops Bundle",
