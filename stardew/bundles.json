@@ -49,8 +49,183 @@
                 "item": "Winter Root",
                 "status": false
             },{
-                
+                "item": "Crystal Fruit",
+                "status": false
+            },{
+                "item": "Snow Yam",
+                "status": false
+            },{
+                "item": "Crocus",
+                "status": false
+            }]
+        },{
+            "name": "Construction Bundle",
+            "contents": [{
+                "item": "Wood (99)",
+                "status": false
+            },{
+                "item": "Wood (99)",
+                "status": false
+            },{
+                "item": "Stone (99)",
+                "status": false
+            },{
+                "item": "Hardwood (10)",
+                "status": false
+            }]
+        },{
+            "name": "Exotic Foraging Bundle",
+            "contents": [{
+                "item": "Coconut",
+                "status": false
+            },{
+                "item": "Cactus Fruit",
+                "status": false
+            },{
+                "item": "Cave Carrot",
+                "status": false
+            },{
+                "item": "Red Mushroom",
+                "status": false
+            },{
+                "item": "Purple Mushroom",
+                "status": false
+            },{
+                "item": "Maple Syrup",
+                "status": false
+            },{
+                "item": "Oak Resin",
+                "status": false
+            },{
+                "item": "Pine Tar",
+                "status": false
+            },{
+                "item": "Morel",
+                "status": false
             }]
         }]
-	}]
+	},{
+        "room": "Pantry",
+        "bundles": [{
+            "name": "Spring Crops Bundle",
+            "contents": [{
+                "item": "Parsnip",
+                "status": false
+            },{
+                "item": "Green Bean",
+                "status": false
+            },{
+                "item": "Cauliflower",
+                "status": false
+            },{
+                "item": "Potato",
+                "status": false
+            }]
+        },{
+            "name": "Summer Crops Bundle",
+            "contents": [{
+                "item": "Tomato",
+                "status": false
+            },{
+                "item": "Hot Pepper",
+                "status": false
+            },{
+                "item": "Blueberry",
+                "status": false
+            },{
+                "item": "Melon",
+                "status": false
+            }]
+        },{
+            "name": "Fall Crops Bundle",
+            "contents": [{
+                "item": "Corn",
+                "status": false
+            },{
+                "item": "Eggplant",
+                "status": false
+            },{
+                "item": "Pumpkin",
+                "status": false
+            },{
+                "item": "Yam",
+                "status": false
+            }]
+        },{
+            "name": "Quality Crops Bundle",
+            "contents": [{
+                "item": "Parsnip⭐ (5)",
+                "status": false
+            },{
+                "item": "Melon⭐ (5)",
+                "status": false
+            },{
+                "item": "Pumpkin⭐ (5)",
+                "status": false
+            },{
+                "item": "Corn⭐ (5)",
+                "status": false
+            }]
+        },{
+            "name": "Animal Bundle",
+            "contents": [{
+                "item": "Large Milk",
+                "status": false
+            },{
+                "item": "Large Egg (Brown)",
+                "status": false
+            },{
+                "item": "Large Egg (White)",
+                "status": false
+            },{
+                "item": "Large Goat Milk",
+                "status": false
+            },{
+                "item": "Wool",
+                "status": false
+            },{
+                "item": "Duck Egg",
+                "status": false
+            }]
+        },{
+            "name": "Artisan Bundle",
+            "contents": [{
+                "item": "Truffle Oil",
+                "status": false
+            },{
+                "item": "Cloth",
+                "status": false
+            },{
+                "item": "Goat Cheese",
+                "status": false
+            },{
+                "item": "Cheese",
+                "status": false
+            },{
+                "item": "Honey",
+                "status": false
+            },{
+                "item": "Jelly",
+                "status": false
+            },{
+                "item": "Apple",
+                "status": false
+            },{
+                "item": "Apricot",
+                "status": false
+            },{
+                "item": "Orange",
+                "status": false
+            },{
+                "item": "Peach",
+                "status": false
+            },{
+                "item": "Pomegranate",
+                "status": false
+            },{
+                "item": "Cherry",
+                "status": false
+            }]
+        }]
+    }]
 }
