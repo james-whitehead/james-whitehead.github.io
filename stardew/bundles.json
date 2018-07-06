@@ -227,5 +227,272 @@
                 "status": false
             }]
         }]
+    },{
+        "room": "Fish Tank",
+        "bundles": [{
+            "name": "River Fish Bundle",
+            "contents": [{
+                "item": "Sunfish",
+                "status": false
+            },{
+                "item": "Catfish",
+                "status": false
+            },{
+                "item": "Shad",
+                "status": false
+            },{
+                "item": "Tiger Trout",
+                "status": false
+            }]
+        },{
+            "name": "Lake Fish Bundle",
+            "contents": [{
+                "item": "Largemouth Bass",
+                "status": false
+            },{
+                "item": "Carp",
+                "status": false
+            },{
+                "item": "Bullhead",
+                "status": false
+            },{
+                "item": "Sturgeon",
+                "status": false
+            }]
+        },{
+            "name": "Ocean Fish Bundle",
+            "contents": [{
+                "item": "Sardine",
+                "status": false
+            },{
+                "item": "Tuna",
+                "status": false
+            },{
+                "item": "Red Snapper",
+                "status": false
+            },{
+                "item": "Tilapia",
+                "status": false
+            }]
+        },{
+            "name": "Night Fishing Bundle",
+            "contents": [{
+                "item": "Walleye",
+                "status": false
+            },{
+                "item": "Bream",
+                "status": false
+            },{
+                "item": "Eel",
+                "status": false
+            }]
+        },{
+            "name": "Crab Pot Bundle",
+            "contents": [{
+                "item": "Lobster",
+                "status": false
+            },{
+                "item": "Crayfish",
+                "status": false
+            },{
+                "item": "Crab",
+                "status": false
+            },{
+                "item": "Cockle",
+                "status": false
+            },{
+                "item": "Mussel",
+                "status": false
+            },{
+                "item": "Shrimp",
+                "status": false
+            },{
+                "item": "Snail",
+                "status": false
+            },{
+                "item": "Periwinkle",
+                "status": false
+            },{
+                "item": "Oyster",
+                "status": false
+            },{
+                "item": "Clam",
+                "status": false
+            }]
+        },{
+            "name": "Specialty Fish Bundle",
+            "contents": [{
+                "item": "Pufferfish",
+                "status": false
+            },{
+                "item": "Ghostfish",
+                "status": false
+            },{
+                "item": "Sandfish",
+                "status": false
+            },{
+                "item": "Woodskip",
+                "status": false
+            }]
+        }]
+    },{
+        "room": "Boiler Room",
+        "bundles": [{
+            "name": "Blacksmith's Bundle",
+            "contents": [{
+                "item": "Copper Bar",
+                "status": false
+            },{
+                "item": "Iron Bar",
+                "status": false
+            },{
+                "item": "Gold Bar",
+                "status": false
+            }]
+        },{
+            "name": "Geologist's Bundle",
+            "contents": [{
+                "item": "Quartz",
+                "status": false
+            },{
+                "item": "Earth Crystal",
+                "status": false
+            },{
+                "item": "Frozen Tear",
+                "status": false
+            },{
+                "item": "Fire Quartz",
+                "status": false
+            }]
+        },{
+            "name": "Adventurer's Bundle",
+            "contents": [{
+                "item": "Slime (99)",
+                "status": false
+            },{
+                "item": "Bat Wing (10)",
+                "status": false
+            },{
+                "item": "Solar Essence",
+                "status": false
+            },{
+                "item": "Void Essence",
+                "status": false
+            }]
+        }]
+    },{
+        "room": "Bulletin Board",
+        "bundles": [{
+            "name": "Chef's Bundle",
+            "contents": [{
+                "item": "Maple Syrup",
+                "status": false
+            },{
+                "item": "Fiddlehead Fern",
+                "status": false
+            },{
+                "item": "Truffle",
+                "status": false
+            },{
+                "item": "Poppy",
+                "status": false
+            },{
+                "item": "Maki Roll",
+                "status": false
+            },{
+                "item": "Fried Egg",
+                "status": false
+            }]
+        },{
+            "name": "Dye Bundle",
+            "contents": [{
+                "item": "Red Mushroom",
+                "status": false
+            },{
+                "item": "Sea Urchin",
+                "status": false
+            },{
+                "item": "Sunflower",
+                "status": false
+            },{
+                "item": "Duck Feather",
+                "status": false
+            },{
+                "item": "Aquamarine",
+                "status": false
+            },{
+                "item": "Red Cabbage",
+                "status": false
+            }]
+        },{
+            "name": "Field Research Bundle",
+            "contents": [{
+                "item": "Purple Mushroom",
+                "status": false
+            },{
+                "item": "Nautilus Shell",
+                "status": false
+            },{
+                "item": "Chub",
+                "status": false
+            },{
+                "item": "Frozen Geode",
+                "status": false
+            }]
+        },{
+            "name": "Fodder Bundle",
+            "contents": [{
+                "item": "Wheat (10)",
+                "status": false
+            },{
+                "item": "Hay (10)",
+                "status": false
+            },{
+                "item": "Apple (3)",
+                "status": false
+            }]
+        },{
+            "name": "Enchanter's Bundle",
+            "contents": [{
+                "item": "Oak Resin",
+                "status": false
+            },{
+                "item": "Wine",
+                "status": false
+            },{
+                "item": "Rabbit's Foot",
+                "status": false
+            },{
+                "item": "Pomegranate",
+                "status": false
+            }]
+        }]
+    },{
+        "room": "Vault",
+        "bundles": [{
+            "name": "2,500 Bundle",
+            "contents": [{
+                "item": "2,500g",
+                "status": false
+            }]
+        },{
+            "name": "5,000 Bundle",
+            "contents": [{
+                "item": "5,000g",
+                "status": false
+            }]
+        },{
+            "name": "10,000 Bundle",
+            "contents": [{
+                "item": "10,000g",
+                "status": false
+            }]
+        },{
+            "name": "25,000 Bundle",
+            "contents": [{
+                "item": "25,000 Bundle",
+                "status": false
+            }]
+        }]
     }]
 }
