@@ -8,8 +8,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Gaegu');
-
+        @import url("https://fonts.googleapis.com/css?family=Gaegu:400+700|IBM+Plex+Mono");
         body {
             background: url("mountains.png") repeat-x center bottom, linear-gradient(180deg, rgba(3,86,166,1) 0%, rgba(215,255,216,1) 100%);
             background-size: 110%;
@@ -17,32 +16,41 @@
 
         img {
             margin-right: 8px;
-            height: 20px;
-            width: 20px;
+            height: 28px;
+            width: 28px;
         }
 
         h2 {
             font-size: 48px;
-            font-family: 'Gaegu', cursive; 
+            font-family: "Gaegu", cursive;
             color: rgb(236, 240, 241);
         }
 
-        .list-group.list-group-root {
+        .list-group-root {
+            border-image: url("box-border.png") 20;
+            border-width: 9px 9px 0 9px;
+            border-radius: 0px;
             padding: 0;
             overflow: hidden;
         }
         
-        .list-group.list-group-root .list-group {
+        .list-group {
+            font-family: "IBM Plex Mono";
+            font-weight: 700;
+            font-size: 18px;
             margin-bottom: 0;
         }
-        
-        .list-group.list-group-root .list-group-item {
-            border-radius: 0;
-            border-width: 1px 0 0 0;
-        }
-        
-        .list-group.list-group-root > .list-group-item:first-child {
-            border-top-width: 0;
+
+        .list-group-item {
+            color: #56160C !important;
+            border-image: url("box-border.png") 20;
+            border-width: 0 0 9px 0;
+            background: linear-gradient(
+                180deg,
+                #ECA65F 6.25%,
+                #EEAA61 6.25%, #EEAA61 12.5%,
+                #FBC571 43.75%, #FBC571 50%,
+                #ECA65F 93.75%, #ECA65F 93.75%);
         }
         
         .list-group.list-group-root > .list-group > .list-group-item {
