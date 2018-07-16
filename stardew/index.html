@@ -14,10 +14,14 @@
             background-size: 110%;
         }
 
-        img {
+        .bundle-item {
             margin-right: 8px;
-            height: 28px;
-            width: 28px;
+            height: 24px;
+            width: 24px;
+        }
+
+        .arrow {
+            margin-right: 8px;
         }
 
         h2 {
@@ -45,12 +49,11 @@
             color: #56160C !important;
             border-image: url("box-border.png") 20;
             border-width: 0 0 9px 0;
-            background: linear-gradient(
-                180deg,
-                #ECA65F 6.25%,
-                #EEAA61 6.25%, #EEAA61 12.5%,
-                #FBC571 43.75%, #FBC571 50%,
-                #ECA65F 93.75%, #ECA65F 93.75%);
+            background: linear-gradient(180deg, rgba(231,161,96,1) 0%, rgba(251,197,113,1) 50%, rgba(231,161,96,1) 100%);
+        }
+
+        .list-group-item:hover {
+            background: linear-gradient(180deg, rgba(198,140,81,1) 0%, rgba(216,167,99,1) 50%, rgba(198,140,81,1) 100%);
         }
         
         .list-group.list-group-root > .list-group > .list-group-item {
@@ -73,9 +76,11 @@
         window.onload = function() {
             $(function() {
                 $('.list-group-item').on('click', function() {
-                    $('.glyphicon', this)
-                    .toggleClass('glyphicon-chevron-right')
-                    .toggleClass('glyphicon-chevron-down');
+                    if ($('.arrow', this).attr('src') === 'arrow-right.png') {
+                        $('.arrow', this).attr('src', 'arrow-down.png');
+                    } else {
+                        $('.arrow', this).attr('src', 'arrow-right.png');
+                    }
                  });
             });
         }
@@ -86,312 +91,312 @@
         <h2>Stardew Valley Bundle Viewer</h2>
         <div class="list-group list-group-root well">
             <a href="#crafts-room" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Crafts Room
+                <img class="arrow" src="arrow-right.png">Crafts Room
             </a>
             <div class="list-group collapse" id="crafts-room">
                 <a href="#spring-foraging" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Spring Foraging Bundle
+                    <img class="arrow" src="arrow-right.png">Spring Foraging Bundle
                 </a>
                 <div class="list-group collapse" id="spring-foraging">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/9/90/Wild_Horseradish.png">Wild Horseradish</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/4/4b/Daffodil.png">Daffodil</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/5/57/Leek.png">Leek</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/b/b1/Dandelion.png">Dandelion</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/9/90/Wild_Horseradish.png">Wild Horseradish</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/4/4b/Daffodil.png">Daffodil</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/5/57/Leek.png">Leek</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/b/b1/Dandelion.png">Dandelion</span>
                 </div>
                 <a href="#summer-foraging" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Summer Foraging Bundle
+                    <img class="arrow" src="arrow-right.png">Summer Foraging Bundle
                 </a>
                 <div class="list-group collapse" id="summer-foraging">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/c/c2/Grape.png">Grape</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/c/c6/Spice_Berry.png">Spice Berry</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/d/d9/Sweet_Pea.png">Sweet Pea</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/c/c2/Grape.png">Grape</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/c/c6/Spice_Berry.png">Spice Berry</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/d/d9/Sweet_Pea.png">Sweet Pea</span>
                 </div>
                 <a href="#fall-foraging" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Fall Foraging Bundle
+                    <img class="arrow" src="arrow-right.png">Fall Foraging Bundle
                 </a>
                 <div class="list-group collapse" id="fall-foraging">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/2/2e/Common_Mushroom.png">Common Mushroom</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/3b/Wild_Plum.png">Wild Plum</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/31/Hazelnut.png">Hazelnut</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/2/25/Blackberry.png">Blackberry</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/2/2e/Common_Mushroom.png">Common Mushroom</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/3b/Wild_Plum.png">Wild Plum</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/31/Hazelnut.png">Hazelnut</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/2/25/Blackberry.png">Blackberry</span>
                 </div>
                 <a href="#winter-foraging" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Winter Foraging Bundle
+                    <img class="arrow" src="arrow-right.png">Winter Foraging Bundle
                 </a>
                 <div class="list-group collapse" id="winter-foraging">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/11/Winter_Root.png">Winter Root</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/16/Crystal_Fruit.png">Crystal Fruit</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/3f/Snow_Yam.png">Snow Yam</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/2/2f/Crocus.png">Crocus</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/11/Winter_Root.png">Winter Root</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/16/Crystal_Fruit.png">Crystal Fruit</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/3f/Snow_Yam.png">Snow Yam</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/2/2f/Crocus.png">Crocus</span>
                 </div>
                 <a href="#construction" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Construction Bundle
+                    <img class="arrow" src="arrow-right.png">Construction Bundle
                 </a>
                 <div class="list-group collapse" id="construction">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/d/df/Wood.png">Wood (99)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/d/df/Wood.png">Wood (99)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/d/d4/Stone.png">Stone (99)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/e/ed/Hardwood.png">Hardwood (10)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/d/df/Wood.png">Wood (99)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/d/df/Wood.png">Wood (99)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/d/d4/Stone.png">Stone (99)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/e/ed/Hardwood.png">Hardwood (10)</span>
                 </div>
                 <a href="#exotic-foraging" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Exotic Foraging Bundle
+                    <img class="arrow" src="arrow-right.png">Exotic Foraging Bundle
                 </a>
                 <div class="list-group collapse" id="exotic-foraging">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/2/2f/Coconut.png">Coconut</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/32/Cactus_Fruit.png">Cactus Fruit</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/34/Cave_Carrot.png">Cave Carrot</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/e/e1/Red_Mushroom.png">Red Mushroom</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png">Purple Mushroom</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/6/6a/Maple_Syrup.png">Maple Syrup</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png">Oak Resin</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/c/ce/Pine_Tar.png">Pine Tar</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/b/b1/Morel.png">Morel</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/2/2f/Coconut.png">Coconut</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/32/Cactus_Fruit.png">Cactus Fruit</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/34/Cave_Carrot.png">Cave Carrot</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/e/e1/Red_Mushroom.png">Red Mushroom</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png">Purple Mushroom</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/6/6a/Maple_Syrup.png">Maple Syrup</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png">Oak Resin</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/c/ce/Pine_Tar.png">Pine Tar</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/b/b1/Morel.png">Morel</span>
                 </div>
             </div>
             <a href="#pantry" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Pantry
+                <img class="arrow" src="arrow-right.png">Pantry
             </a>
             <div class="list-group collapse" id="pantry">
                 <a href="#spring-crops" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Spring Crops Bundle
+                    <img class="arrow" src="arrow-right.png">Spring Crops Bundle
                 </a>
                 <div class="list-group collapse" id="spring-crops">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/d/db/Parsnip.png">Parsnip</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/5/5c/Green_Bean.png">Green Bean</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/a/aa/Cauliflower.png">Cauliflower</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/c/c2/Potato.png">Potato</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/d/db/Parsnip.png">Parsnip</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/5/5c/Green_Bean.png">Green Bean</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/a/aa/Cauliflower.png">Cauliflower</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/c/c2/Potato.png">Potato</span>
                 </div>
                 <a href="#summer-crops" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Summer Crops Bundle
+                    <img class="arrow" src="arrow-right.png">Summer Crops Bundle
                 </a>
                 <div class="list-group collapse" id="summer-crops">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/9/9d/Tomato.png">Tomato</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/f/f1/Hot_Pepper.png">Hot Pepper</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/9/9e/Blueberry.png">Blueberry</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/19/Melon.png">Melon</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/9/9d/Tomato.png">Tomato</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/f/f1/Hot_Pepper.png">Hot Pepper</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/9/9e/Blueberry.png">Blueberry</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/19/Melon.png">Melon</span>
                 </div>
                 <a href="#fall-crops" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Fall Crops Bundle
+                    <img class="arrow" src="arrow-right.png">Fall Crops Bundle
                 </a>
                 <div class="list-group collapse" id="fall-crops">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/f/f8/Corn.png">Corn</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/8/8f/Eggplant.png">Eggplant</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/6/64/Pumpkin.png">Pumpkin</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/5/52/Yam.png">Yam</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/f/f8/Corn.png">Corn</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/8/8f/Eggplant.png">Eggplant</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/6/64/Pumpkin.png">Pumpkin</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/5/52/Yam.png">Yam</span>
                 </div>
                 <a href="#quality-crops" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Quality Crops Bundle
+                    <img class="arrow" src="arrow-right.png">Quality Crops Bundle
                 </a>
                 <div class="list-group collapse" id="quality-crops">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/d/db/Parsnip.png">Parsnip ⭐ (5)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/19/Melon.png">Melon ⭐ (5)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/6/64/Pumpkin.png">Pumpkin ⭐ (5)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/f/f8/Corn.png">Corn ⭐ (5)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/d/db/Parsnip.png">Parsnip ⭐ (5)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/19/Melon.png">Melon ⭐ (5)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/6/64/Pumpkin.png">Pumpkin ⭐ (5)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/f/f8/Corn.png">Corn ⭐ (5)</span>
                 </div>
                 <a href="#animal" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Animal Bundle
+                    <img class="arrow" src="arrow-right.png">Animal Bundle
                 </a>
                 <div class="list-group collapse" id="animal">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/6/67/Large_Milk.png">Large Milk</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/9/91/Large_Brown_Egg.png">Large Egg (Brown)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/5/5d/Large_Egg.png">Large Egg (White)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/f/f2/Large_Goat_Milk.png">Large Goat Milk</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/34/Wool.png">Wool</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/31/Duck_Egg.png">Duck Egg</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/6/67/Large_Milk.png">Large Milk</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/9/91/Large_Brown_Egg.png">Large Egg (Brown)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/5/5d/Large_Egg.png">Large Egg (White)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/f/f2/Large_Goat_Milk.png">Large Goat Milk</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/34/Wool.png">Wool</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/31/Duck_Egg.png">Duck Egg</span>
                 </div>
                 <a href="#artisan" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Artisan Bundle
+                    <img class="arrow" src="arrow-right.png">Artisan Bundle
                 </a>
                 <div class="list-group collapse" id="artisan">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/3d/Truffle_Oil.png">Truffle Oil</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/5/51/Cloth.png">Cloth</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/c/c8/Goat_Cheese.png">Goat Cheese</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/a/a5/Cheese.png">Cheese</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/c/c6/Honey.png">Honey</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/0/05/Jelly.png">Jelly</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/7/7d/Apple.png">Apple</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/f/fc/Apricot.png">Apricot</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/4/43/Orange.png">Orange</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/e/e2/Peach.png">Peach</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/1b/Pomegranate.png">Pomegranate</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/2/20/Cherry.png">Cherry</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/3d/Truffle_Oil.png">Truffle Oil</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/5/51/Cloth.png">Cloth</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/c/c8/Goat_Cheese.png">Goat Cheese</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/a/a5/Cheese.png">Cheese</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/c/c6/Honey.png">Honey</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/0/05/Jelly.png">Jelly</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/7/7d/Apple.png">Apple</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/f/fc/Apricot.png">Apricot</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/4/43/Orange.png">Orange</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/e/e2/Peach.png">Peach</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/1b/Pomegranate.png">Pomegranate</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/2/20/Cherry.png">Cherry</span>
                 </div>
             </div>
             <a href="#fish-tank" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Fish Tank
+                <img class="arrow" src="arrow-right.png">Fish Tank
             </a>
             <div class="list-group collapse" id="fish-tank">
                 <a href="#river-fish" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>River Fish Bundle
+                    <img class="arrow" src="arrow-right.png">River Fish Bundle
                 </a>
                 <div class="list-group collapse" id="river-fish">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/5/56/Sunfish.png">Sunfish</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/9/99/Catfish.png">Catfish</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/e/ef/Shad.png">Shad</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/0/01/Tiger_Trout.png">Tiger Trout</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/5/56/Sunfish.png">Sunfish</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/9/99/Catfish.png">Catfish</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/e/ef/Shad.png">Shad</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/0/01/Tiger_Trout.png">Tiger Trout</span>
                 </div>
                 <a href="#lake-fish" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Lake Fish Bundle
+                    <img class="arrow" src="arrow-right.png">Lake Fish Bundle
                 </a>
                 <div class="list-group collapse" id="lake-fish">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/11/Largemouth_Bass.png">Largemouth Bass</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/a/a8/Carp.png">Carp</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/d/db/Bullhead.png">Bullhead</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/4/42/Sturgeon.png">Sturgeon</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/11/Largemouth_Bass.png">Largemouth Bass</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/a/a8/Carp.png">Carp</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/d/db/Bullhead.png">Bullhead</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/4/42/Sturgeon.png">Sturgeon</span>
                 </div>
                 <a href="#ocean-fish" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Ocean Fish Bundle
+                    <img class="arrow" src="arrow-right.png">Ocean Fish Bundle
                 </a>
                 <div class="list-group collapse" id="ocean-fish">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/0/04/Sardine.png">Sardine</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/c/c5/Tuna.png">Tuna</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/d/d3/Red_Snapper.png">Red Snapper</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/7/73/Tilapia.png">Tilapia</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/0/04/Sardine.png">Sardine</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/c/c5/Tuna.png">Tuna</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/d/d3/Red_Snapper.png">Red Snapper</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/7/73/Tilapia.png">Tilapia</span>
                 </div>
                 <a href="#night-fishing" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Night Fishing Bundle
+                    <img class="arrow" src="arrow-right.png">Night Fishing Bundle
                 </a>
                 <div class="list-group collapse" id="night-fishing">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/0/05/Walleye.png">Walleye</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/8/82/Bream.png">Bream</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/9/91/Eel.png">Eel</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/0/05/Walleye.png">Walleye</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/8/82/Bream.png">Bream</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/9/91/Eel.png">Eel</span>
                 </div>
                 <a href="#crab-pot" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Crab Pot Bundle
+                    <img class="arrow" src="arrow-right.png">Crab Pot Bundle
                 </a>
                 <div class="list-group collapse" id="crab-pot">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/9/9f/Lobster.png">Lobster</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/5/53/Crayfish.png">Crayfish</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/6/63/Crab.png">Crab</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/a/ad/Cockle.png">Cockle</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/a/aa/Mussel.png">Mussel</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/9/91/Shrimp.png">Shrimp</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/d/d2/Snail.png">Snail</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/1d/Periwinkle.png">Periwinkle</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/5/54/Oyster.png">Oyster</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/e/ed/Clam.png">Clam</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/9/9f/Lobster.png">Lobster</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/5/53/Crayfish.png">Crayfish</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/6/63/Crab.png">Crab</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/a/ad/Cockle.png">Cockle</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/a/aa/Mussel.png">Mussel</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/9/91/Shrimp.png">Shrimp</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/d/d2/Snail.png">Snail</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/1d/Periwinkle.png">Periwinkle</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/5/54/Oyster.png">Oyster</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/e/ed/Clam.png">Clam</span>
                 </div>
                 <a href="#specialty-fish" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Specialty Fish Bundle
+                    <img class="arrow" src="arrow-right.png">Specialty Fish Bundle
                 </a>
                 <div class="list-group collapse" id="specialty-fish">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/b/ba/Pufferfish.png">Pufferfish</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/7/72/Ghostfish.png">Ghostfish</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/b/bb/Sandfish.png">Sandfish</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/9/97/Woodskip.png">Woodskip</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/b/ba/Pufferfish.png">Pufferfish</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/7/72/Ghostfish.png">Ghostfish</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/b/bb/Sandfish.png">Sandfish</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/9/97/Woodskip.png">Woodskip</span>
                 </div>
             </div>
             <a href="#boiler-room" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Boiler Room
+                <img class="arrow" src="arrow-right.png">Boiler Room
             </a>
             <div class="list-group collapse" id="boiler-room">
                 <a href="#blacksmiths" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Blacksmith's Bundle
+                    <img class="arrow" src="arrow-right.png">Blacksmith's Bundle
                 </a>
                 <div class="list-group collapse" id="blacksmiths">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/f/f1/Copper_Bar.png">Copper Bar</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/6/6c/Iron_Bar.png">Iron Bar</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/4/4e/Gold_Bar.png">Gold Bar</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/f/f1/Copper_Bar.png">Copper Bar</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/6/6c/Iron_Bar.png">Iron Bar</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/4/4e/Gold_Bar.png">Gold Bar</span>
                 </div>
                  <a href="#geologists" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Geologist's Bundle
+                    <img class="arrow" src="arrow-right.png">Geologist's Bundle
                 </a>
                 <div class="list-group collapse" id="geologists">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/c/cf/Quartz.png">Quartz</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/7/74/Earth_Crystal.png">Earth Crystal</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/e/ec/Frozen_Tear.png">Frozen Tear</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/5/5b/Fire_Quartz.png">Fire Quartz</span>                    
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/c/cf/Quartz.png">Quartz</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/7/74/Earth_Crystal.png">Earth Crystal</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/e/ec/Frozen_Tear.png">Frozen Tear</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/5/5b/Fire_Quartz.png">Fire Quartz</span>                    
                 </div>
                  <a href="#adventurers" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Adventurer's Bundle
+                    <img class="arrow" src="arrow-right.png">Adventurer's Bundle
                 </a>
                 <div class="list-group collapse" id="adventurers">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/38/Slime.png">Slime (99)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/35/Bat_Wing.png">Bat Wing (10)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/f/f4/Solar_Essence.png">Solar Essence</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/1f/Void_Essence.png">Void Essence</span>                    
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/38/Slime.png">Slime (99)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/35/Bat_Wing.png">Bat Wing (10)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/f/f4/Solar_Essence.png">Solar Essence</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/1f/Void_Essence.png">Void Essence</span>                    
                 </div>
             </div>
             <a href="#bulletin-board" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Bulletin Board
+                <img class="arrow" src="arrow-right.png">Bulletin Board
             </a>
             <div class="list-group collapse" id="bulletin-board">
                 <a href="#chefs" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Chef's Bundle
+                    <img class="arrow" src="arrow-right.png">Chef's Bundle
                 </a>
                 <div class="list-group collapse" id="chefs">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/6/6a/Maple_Syrup.png">Maple Syrup</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/4/48/Fiddlehead_Fern.png">Fiddlehead Fern</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/f/f2/Truffle.png">Truffle</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/3/37/Poppy.png">Poppy</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/b/b6/Maki_Roll.png">Maki Roll</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/18/Fried_Egg.png">Fried Egg</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/6/6a/Maple_Syrup.png">Maple Syrup</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/4/48/Fiddlehead_Fern.png">Fiddlehead Fern</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/f/f2/Truffle.png">Truffle</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/3/37/Poppy.png">Poppy</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/b/b6/Maki_Roll.png">Maki Roll</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/18/Fried_Egg.png">Fried Egg</span>
                 </div>
                 <a href="#dye" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Dye Bundle
+                    <img class="arrow" src="arrow-right.png">Dye Bundle
                 </a>
                 <div class="list-group collapse" id="dye">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/e/e1/Red_Mushroom.png">Red Mushroom</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/e/e7/Sea_Urchin.png">Sea Urchin</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/8/81/Sunflower.png">Sunflower</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/f/f9/Duck_Feather.png">Duck Feather</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/a/a2/Aquamarine.png">Aquamarine</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/2/2d/Red_Cabbage.png">Red Cabbage</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/e/e1/Red_Mushroom.png">Red Mushroom</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/e/e7/Sea_Urchin.png">Sea Urchin</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/8/81/Sunflower.png">Sunflower</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/f/f9/Duck_Feather.png">Duck Feather</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/a/a2/Aquamarine.png">Aquamarine</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/2/2d/Red_Cabbage.png">Red Cabbage</span>
                 </div>
                 <a href="#field-research" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Field Research Bundle
+                    <img class="arrow" src="arrow-right.png">Field Research Bundle
                 </a>
                 <div class="list-group collapse" id="field-research">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png">Purple Mushroom</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/a/a4/Nautilus_Shell.png">Nautilus Shell</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/b/bd/Chub.png">Chub</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/b/bf/Frozen_Geode.png">Frozen Geode</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png">Purple Mushroom</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/a/a4/Nautilus_Shell.png">Nautilus Shell</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/b/bd/Chub.png">Chub</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/b/bf/Frozen_Geode.png">Frozen Geode</span>
                 </div>
                 <a href="#fodder" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Fodder Bundle
+                    <img class="arrow" src="arrow-right.png">Fodder Bundle
                 </a>
                 <div class="list-group collapse" id="fodder">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/e/e2/Wheat.png">Wheat (10)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/a/aa/Hay.png">Hay (10)</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/7/7d/Apple.png">Apple (3)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/e/e2/Wheat.png">Wheat (10)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/a/aa/Hay.png">Hay (10)</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/7/7d/Apple.png">Apple (3)</span>
                 </div>
                 <a href="#enchanters" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>Enchanter's Bundle
+                    <img class="arrow" src="arrow-right.png">Enchanter's Bundle
                 </a>
                 <div class="list-group collapse" id="enchanters">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png">Oak Resin</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/6/69/Wine.png">Wine</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/c/ca/Rabbit%27s_Foot.png">Rabbit's Foot</span>
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/1b/Pomegranate.png">Pomegranate</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/4/40/Oak_Resin.png">Oak Resin</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/6/69/Wine.png">Wine</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/c/ca/Rabbit%27s_Foot.png">Rabbit's Foot</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/1b/Pomegranate.png">Pomegranate</span>
                 </div>
             </div>
             <a href="#vault" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Vault
+                <img class="arrow" src="arrow-right.png">Vault
             </a>
             <div class="list-group collapse" id="vault">
                 <a href="#2500" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>2,500 Bundle
+                    <img class="arrow" src="arrow-right.png">2,500 Bundle
                 </a>
                 <div class="list-group collapse" id="2500">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png">2,500g</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png">2,500g</span>
                 </div>
                 <a href="#5000" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>5,000 Bundle
+                    <img class="arrow" src="arrow-right.png">5,000 Bundle
                 </a>
                 <div class="list-group collapse" id="5000">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png">5,000g</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png">5,000g</span>
                 </div>
                 <a href="#10000" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>10,000 Bundle
+                    <img class="arrow" src="arrow-right.png">10,000 Bundle
                 </a>
                 <div class="list-group collapse" id="10000">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png">10,000g</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png">10,000g</span>
                 </div>
                 <a href="#25000" class="list-group-item" data-toggle="collapse">
-                    <i class="glyphicon glyphicon-chevron-right"></i>25,000 Bundle
+                    <img class="arrow" src="arrow-right.png">25,000 Bundle
                 </a>
                 <div class="list-group collapse" id="25000">
-                    <span class="list-group-item"><img src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png">25,000g</span>
+                    <span class="list-group-item"><img class="bundle-item" src="https://stardewvalleywiki.com/mediawiki/images/1/10/Gold.png">25,000g</span>
                 </div>
             </div>
         </div>
