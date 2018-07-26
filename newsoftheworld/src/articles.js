@@ -105,7 +105,7 @@ function onMapClick(event) {
     console.log(latlng)
     let cors = 'https://cors-anywhere.herokuapp.com';
     // Reverse address lookup from latlng
-    let url = `${cors}/https://eu1.locationiq.org/v1/reverse.php?key=ce51d023f628dc` +
+    let url = `${cors}/https://eu1.locationiq.org/v1/reverse.php?key=pk.ed7ce19ab70efb934dd6abb03202062c` +
         `&lat=${latlng.lat}` +
         `&lon=${latlng.lng}` +
         '&format=json' +
