@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: News of the World - Part One
 layout: post
 excerpt: Choosing and configuring the Leaflet library
@@ -248,5 +248,3 @@ This creates an HTTP GET request to OSM's Nominatim API with the latitude and lo
 ```
 
 Neat! So, we now have a map that gets the address of anywhere you click. For part two, we're going to see how we can use this to search!
-
-
